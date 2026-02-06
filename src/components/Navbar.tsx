@@ -40,12 +40,12 @@ export const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-9 h-9 bg-accent rounded-xl flex items-center justify-center shadow-sm">
-            <span className="text-accent-foreground font-extrabold text-base">P</span>
+          <div className="w-9 h-9 bg-primary rounded-xl flex items-center justify-center shadow-sm">
+            <span className="text-primary-foreground font-extrabold text-base">P</span>
           </div>
           <span
             className={`text-xl font-extrabold transition-colors ${
-              isTransparent ? "text-primary-foreground" : "text-foreground"
+              isTransparent ? "text-primary-foreground" : "text-primary"
             }`}
           >
             Pick<span className="text-accent">App</span>

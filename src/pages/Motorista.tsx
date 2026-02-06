@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { PageBanner } from "@/components/PageBanner";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -27,6 +26,7 @@ import {
 } from "lucide-react";
 import { WHATSAPP_URL } from "@/lib/constants";
 import { toast } from "sonner";
+import driverImage from "@/assets/pickapp-driver.jpeg";
 
 const benefits = [
   {
@@ -87,10 +87,30 @@ const Motorista = () => {
 
   return (
     <>
-      <PageBanner
-        title="Ganhe Dinheiro Dirigindo com a PickApp"
-        subtitle="Mais flexibilidade e oportunidades para motoristas locais em Maputo."
-      />
+      {/* Hero Banner with Driver Image */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={driverImage}
+            alt="Motorista PickApp"
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/50" />
+        </div>
+        <div className="absolute top-10 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <ScrollReveal>
+            <h1 className="text-3xl md:text-5xl font-extrabold text-primary-foreground mb-4">
+              Ganhe Dinheiro Dirigindo com a PickApp
+            </h1>
+            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto">
+              Mais flexibilidade e oportunidades para motoristas locais em
+              Maputo. É simples, rápido e sem complicações.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
 
       {/* Benefits */}
       <section className="py-20 bg-background">
