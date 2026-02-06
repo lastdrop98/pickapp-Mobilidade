@@ -12,6 +12,7 @@ import {
   Smartphone,
 } from "lucide-react";
 import { PLAYSTORE_URL } from "@/lib/constants";
+import categoriesImage from "@/assets/pickapp-categories.jpeg";
 
 const howToSteps = [
   {
@@ -104,8 +105,34 @@ const Passageiro = () => (
       </div>
     </section>
 
-    {/* Benefits */}
+    {/* Categories */}
     <section className="py-20 bg-muted/50">
+      <div className="container mx-auto px-4">
+        <ScrollReveal>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
+              Nossas Categorias
+            </h2>
+            <p className="text-muted-foreground mt-2">
+              Cada uma pensada para uma necessidade diferente
+            </p>
+          </div>
+        </ScrollReveal>
+        <ScrollReveal>
+          <div className="max-w-4xl mx-auto">
+            <img
+              src={categoriesImage}
+              alt="Categorias PickApp - Básico, Premium, Família, Luxo, Txopela, Mota, O Amarelo"
+              className="rounded-2xl shadow-lg w-full border border-border/50"
+              loading="lazy"
+            />
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+
+    {/* Benefits */}
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-12">
@@ -135,7 +162,7 @@ const Passageiro = () => (
     </section>
 
     {/* Safety Tips */}
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
           <ScrollReveal>
