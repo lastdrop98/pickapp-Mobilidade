@@ -110,7 +110,11 @@ export const BenefitsSection = () => (
     </section>
 
     {/* Motoristas */}
-    <section className="py-20 md:py-28 bg-primary text-primary-foreground">
+    <section className="relative py-20 md:py-28 text-primary-foreground overflow-hidden">
+      <div className="absolute inset-0">
+        <img src={driverBenefitsBg} alt="" className="w-full h-full object-cover" loading="lazy" />
+      </div>
+      <div className="absolute inset-0 bg-primary/85 backdrop-blur-sm" />
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-16">
