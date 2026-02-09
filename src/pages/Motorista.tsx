@@ -213,7 +213,7 @@ const Motorista = () => {
                   />
                 </div>
                 <div>
-                  <Label>Tipo de veículo</Label>
+                  <Label>Marca do veículo</Label>
                   <Select
                     value={formData.veiculo}
                     onValueChange={(val) =>
@@ -224,10 +224,18 @@ const Motorista = () => {
                       <SelectValue placeholder="Selecione o tipo" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="sedan">Sedan</SelectItem>
-                      <SelectItem value="suv">SUV</SelectItem>
-                      <SelectItem value="hatchback">Hatchback</SelectItem>
-                      <SelectItem value="minivan">Minivan</SelectItem>
+                      <SelectItem value="toyota">Toyota</SelectItem>
+                      <SelectItem value="honda">Honda</SelectItem>
+                      <SelectItem value="nissan">Nissan</SelectItem>
+                      <SelectItem value="mazda">Mazda</SelectItem>
+                      <SelectItem value="daihatsu">Daihatsu</SelectItem>
+                      <SelectItem value="lexus">Lexus</SelectItem>
+                      <SelectItem value="bmw">BMW</SelectItem>
+                      <SelectItem value="mercedes">Mercedes-Benz</SelectItem>
+                      <SelectItem value="hyundai">Hyundai</SelectItem>
+                      <SelectItem value="kia">Kia</SelectItem>
+                      <SelectItem value="mitsubishi">Mitsubishi</SelectItem>
+                      <SelectItem value="volkswagen">Volkswagen</SelectItem>
                       <SelectItem value="outro">Outro</SelectItem>
                     </SelectContent>
                   </Select>
@@ -244,16 +252,17 @@ const Motorista = () => {
                       <SelectValue placeholder="Selecione a zona" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="maputo-centro">
-                        Maputo Centro
-                      </SelectItem>
-                      <SelectItem value="matola">Matola</SelectItem>
-                      <SelectItem value="zimpeto">Zimpeto</SelectItem>
-                      <SelectItem value="sommerschield">
-                        Sommerschield
-                      </SelectItem>
-                      <SelectItem value="polana">Polana</SelectItem>
-                      <SelectItem value="outro">Outra</SelectItem>
+                      <SelectItem value="maputo-cidade">Maputo Cidade</SelectItem>
+                      <SelectItem value="maputo-provincia">Maputo Província</SelectItem>
+                      <SelectItem value="gaza">Gaza</SelectItem>
+                      <SelectItem value="inhambane">Inhambane</SelectItem>
+                      <SelectItem value="sofala">Sofala</SelectItem>
+                      <SelectItem value="manica">Manica</SelectItem>
+                      <SelectItem value="tete">Tete</SelectItem>
+                      <SelectItem value="zambezia">Zambézia</SelectItem>
+                      <SelectItem value="nampula">Nampula</SelectItem>
+                      <SelectItem value="cabo-delgado">Cabo Delgado</SelectItem>
+                      <SelectItem value="niassa">Niassa</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
