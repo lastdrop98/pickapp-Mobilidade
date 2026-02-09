@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Download, UserPlus } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { PLAYSTORE_URL } from "@/lib/constants";
+import { PLAYSTORE_USER_URL, APPSTORE_USER_URL } from "@/lib/constants";
 import heroImage from "@/assets/hero-mobility.jpg";
 import heroBg from "@/assets/hero-driver-bg.jpg";
 
@@ -34,14 +34,26 @@ export const HeroSection = () => (
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild variant="accent" size="lg">
                 <a
-                  href={PLAYSTORE_URL}
+                  href={PLAYSTORE_USER_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Download className="w-5 h-5" />
-                  Baixar na PlayStore
+                  Google Play
                 </a>
               </Button>
+              <Button asChild variant="heroOutline" size="lg">
+                <a
+                  href={APPSTORE_USER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download className="w-5 h-5" />
+                  App Store
+                </a>
+              </Button>
+            </div>
+            <div className="mt-4">
               <Button asChild variant="heroOutline" size="lg">
                 <Link to="/motorista">
                   <UserPlus className="w-5 h-5" />

@@ -11,14 +11,14 @@ import {
   Users,
   Smartphone,
 } from "lucide-react";
-import { PLAYSTORE_URL } from "@/lib/constants";
+import { PLAYSTORE_USER_URL, APPSTORE_USER_URL } from "@/lib/constants";
 import categoriesImage from "@/assets/pickapp-categories.jpeg";
 
 const howToSteps = [
   {
     icon: Download,
     title: "Baixe o app",
-    description: "Disponível gratuitamente na Google PlayStore.",
+    description: "Disponível gratuitamente na Google PlayStore e App Store.",
   },
   {
     icon: Smartphone,
@@ -198,16 +198,28 @@ const Passageiro = () => (
           <p className="text-lg text-primary-foreground/70 mb-8">
             Baixe o PickApp e comece a viajar com segurança e conforto.
           </p>
-          <Button asChild variant="accent" size="lg">
-            <a
-              href={PLAYSTORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Download className="w-5 h-5" />
-              Baixar na PlayStore
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild variant="accent" size="lg">
+              <a
+                href={PLAYSTORE_USER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="w-5 h-5" />
+                Google Play
+              </a>
+            </Button>
+            <Button asChild variant="heroOutline" size="lg">
+              <a
+                href={APPSTORE_USER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="w-5 h-5" />
+                App Store
+              </a>
+            </Button>
+          </div>
         </ScrollReveal>
       </div>
     </section>
