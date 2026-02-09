@@ -23,8 +23,9 @@ import {
   Camera,
   MessageCircle,
   CheckCircle,
+  Download,
 } from "lucide-react";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { WHATSAPP_URL, PLAYSTORE_DRIVER_URL, APPSTORE_DRIVER_URL } from "@/lib/constants";
 import { toast } from "sonner";
 import driverImage from "@/assets/pickapp-driver.jpeg";
 
@@ -104,10 +105,32 @@ const Motorista = () => {
             <h1 className="text-3xl md:text-5xl font-extrabold text-primary-foreground mb-4">
               Ganhe Dinheiro Dirigindo com a PickApp
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-8">
               Mais flexibilidade e oportunidades para motoristas locais em
               Maputo. É simples, rápido e sem complicações.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild variant="accent" size="lg">
+                <a
+                  href={PLAYSTORE_DRIVER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download className="w-5 h-5" />
+                  Google Play
+                </a>
+              </Button>
+              <Button asChild variant="heroOutline" size="lg">
+                <a
+                  href={APPSTORE_DRIVER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download className="w-5 h-5" />
+                  App Store
+                </a>
+              </Button>
+            </div>
           </ScrollReveal>
         </div>
       </section>

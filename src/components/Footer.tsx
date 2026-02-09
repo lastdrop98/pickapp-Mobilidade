@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
-import { PLAYSTORE_URL, SUPPORT_EMAIL, PHONE_NUMBER } from "@/lib/constants";
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import {
+  PLAYSTORE_USER_URL,
+  APPSTORE_USER_URL,
+  SUPPORT_EMAIL,
+  PHONE_NUMBER,
+  FACEBOOK_URL,
+  INSTAGRAM_URL,
+  LINKEDIN_URL,
+} from "@/lib/constants";
+import logo from "@/assets/pickapp-logo.png";
 
 const footerLinks = [
   { name: "Home", path: "/" },
@@ -17,12 +26,7 @@ export const Footer = () => (
         {/* Brand */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-9 h-9 bg-accent rounded-xl flex items-center justify-center">
-              <span className="text-accent-foreground font-extrabold text-base">P</span>
-            </div>
-            <span className="text-xl font-extrabold">
-              Pick<span className="text-accent">App</span>
-            </span>
+            <img src={logo} alt="PickApp" className="h-10 w-auto brightness-0 invert" />
           </div>
           <p className="text-primary-foreground/60 text-sm leading-relaxed">
             Mobilidade inteligente em Moçambique. Viagens seguras, rápidas e com
@@ -75,35 +79,62 @@ export const Footer = () => (
           </div>
         </div>
 
-        {/* Social */}
+        {/* Social + Download */}
         <div>
           <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider text-primary-foreground/80">
             Redes Sociais
           </h4>
-          <div className="flex gap-3 mb-4">
+          <div className="flex gap-3 mb-6">
             <a
-              href="#"
+              href={FACEBOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-xl bg-primary-foreground/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all"
               aria-label="Facebook"
             >
               <Facebook className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-xl bg-primary-foreground/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all"
               aria-label="Instagram"
             >
               <Instagram className="w-5 h-5" />
             </a>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-xl bg-primary-foreground/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-5 h-5" />
+            </a>
           </div>
-          <a
-            href={PLAYSTORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2.5 bg-accent text-accent-foreground rounded-xl text-sm font-semibold hover:bg-accent/90 transition-colors"
-          >
-            Baixar na PlayStore
-          </a>
+
+          <h4 className="font-semibold mb-3 text-sm uppercase tracking-wider text-primary-foreground/80">
+            Baixar App
+          </h4>
+          <div className="flex flex-col gap-2">
+            <a
+              href={PLAYSTORE_USER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-accent text-accent-foreground rounded-xl text-sm font-semibold hover:bg-accent/90 transition-colors"
+            >
+              Google Play
+            </a>
+            <a
+              href={APPSTORE_USER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-primary-foreground/10 text-primary-foreground rounded-xl text-sm font-semibold hover:bg-primary-foreground/20 transition-colors"
+            >
+              App Store
+            </a>
+          </div>
         </div>
       </div>
 

@@ -1,7 +1,7 @@
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { PLAYSTORE_URL } from "@/lib/constants";
+import { PLAYSTORE_USER_URL, APPSTORE_USER_URL } from "@/lib/constants";
 import qrImage from "@/assets/pickapp-qr.jpeg";
 
 export const DownloadSection = () => (
@@ -23,12 +23,22 @@ export const DownloadSection = () => (
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <Button asChild variant="accent" size="lg">
                     <a
-                      href={PLAYSTORE_URL}
+                      href={PLAYSTORE_USER_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <Download className="w-5 h-5" />
-                      Baixar na PlayStore
+                      Google Play
+                    </a>
+                  </Button>
+                  <Button asChild variant="default" size="lg">
+                    <a
+                      href={APPSTORE_USER_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Download className="w-5 h-5" />
+                      App Store
                     </a>
                   </Button>
                 </div>
