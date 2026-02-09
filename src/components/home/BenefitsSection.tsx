@@ -10,6 +10,7 @@ import {
   Users,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import driverBenefitsBg from "@/assets/driver-benefits-bg.jpg";
 
 const passengerBenefits = [
   {
