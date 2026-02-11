@@ -71,8 +71,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signOut = async () => {
-    await supabase.auth.signOut();
-    setIsAdmin(false);
+    try {
+      await supabase.auth.signOut();
+      setSession(null);
+      setUser(null);
+      setIsAdmin(false);
+      window.location.href = "/login";
+    } catch (e) {
+      console.error("Erro ao sair:", e);
+    }
   };
 
   return (

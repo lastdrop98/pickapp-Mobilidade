@@ -178,18 +178,21 @@ export type Database = {
       }
       user_roles: {
         Row: {
+          app_role: string | null
           created_at: string
           id: string
           role: Database["public"]["Enums"]["app_role"]
           user_id: string
         }
         Insert: {
+          app_role?: string | null
           created_at?: string
           id?: string
           role?: Database["public"]["Enums"]["app_role"]
           user_id: string
         }
         Update: {
+          app_role?: string | null
           created_at?: string
           id?: string
           role?: Database["public"]["Enums"]["app_role"]
