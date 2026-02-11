@@ -14,40 +14,35 @@ export type Database = {
   }
   public: {
     Tables: {
-      ativacoes_motoristas: {
+      activacoes_motoristas: {
         Row: {
-          criado_em: string | null
-          data_followup: string | null
+          created_at: string | null
+          data: string
           id: string
-          motorista_id: string | null
-          notas: string | null
-          resultado: string | null
+          local: string | null
+          motoristas_abordados: number | null
+          motoristas_registados: number | null
+          observacoes: string | null
         }
         Insert: {
-          criado_em?: string | null
-          data_followup?: string | null
+          created_at?: string | null
+          data?: string
           id?: string
-          motorista_id?: string | null
-          notas?: string | null
-          resultado?: string | null
+          local?: string | null
+          motoristas_abordados?: number | null
+          motoristas_registados?: number | null
+          observacoes?: string | null
         }
         Update: {
-          criado_em?: string | null
-          data_followup?: string | null
+          created_at?: string | null
+          data?: string
           id?: string
-          motorista_id?: string | null
-          notas?: string | null
-          resultado?: string | null
+          local?: string | null
+          motoristas_abordados?: number | null
+          motoristas_registados?: number | null
+          observacoes?: string | null
         }
-        Relationships: [
-          {
-            foreignKeyName: "ativacoes_motoristas_motorista_id_fkey"
-            columns: ["motorista_id"]
-            isOneToOne: false
-            referencedRelation: "motoristas"
-            referencedColumns: ["id"]
-          },
-        ]
+        Relationships: []
       }
       contactos_site: {
         Row: {
@@ -118,6 +113,27 @@ export type Database = {
           tipo_veiculo?: string | null
           whatsapp?: string
           zona_trabalho?: string | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string | null
+          full_name: string | null
+          id: string
+          is_admin: boolean | null
+        }
+        Insert: {
+          created_at?: string | null
+          full_name?: string | null
+          id: string
+          is_admin?: boolean | null
+        }
+        Update: {
+          created_at?: string | null
+          full_name?: string | null
+          id?: string
+          is_admin?: boolean | null
         }
         Relationships: []
       }
