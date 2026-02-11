@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -78,8 +79,18 @@ const Motorista = () => {
     zona: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const { error } = await supabase.from("motoristas").insert({
+      nome_completo: formData.nome,
+      whatsapp: formData.whatsapp,
+      tipo_veiculo: formData.veiculo || null,
+      zona_trabalho: formData.zona || null,
+    });
+    if (error) {
+      toast.error("Erro ao enviar candidatura. Tente novamente.");
+      return;
+    }
     toast.success(
       "Candidatura enviada com sucesso! Entraremos em contacto em breve."
     );
@@ -106,8 +117,8 @@ const Motorista = () => {
               Ganhe Dinheiro Dirigindo com a PickApp
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-              Mais flexibilidade e oportunidades para motoristas locais em
-              Maputo. É simples, rápido e sem complicações.
+              Mais flexibilidade e oportunidades para motoristas em todo
+              Moçambique. É simples, rápido e sem complicações.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild variant="accent" size="lg">

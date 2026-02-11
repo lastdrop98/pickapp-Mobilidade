@@ -13,10 +13,10 @@ export const APPSTORE_DRIVER_URL =
 // Keep backward compat alias
 export const PLAYSTORE_URL = PLAYSTORE_USER_URL;
 
-export const WHATSAPP_NUMBER = "258828078520";
+export const WHATSAPP_NUMBER = "258846404160";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
-export const SUPPORT_EMAIL = "suporte@pickapp.co.mz";
-export const PHONE_NUMBER = "+258 82 807 8520";
+export const SUPPORT_EMAIL = "Shelton.barreto@dplus.co.mz";
+export const PHONE_NUMBER = "+258 82 190 8244";
 
 export const FACEBOOK_URL = "https://facebook.com/pickappmz";
 export const INSTAGRAM_URL = "https://instagram.com/picapp.mz";
