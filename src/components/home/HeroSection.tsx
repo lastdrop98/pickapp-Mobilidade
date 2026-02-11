@@ -21,7 +21,7 @@ export const HeroSection = () => (
           <div className="max-w-xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/15 text-accent text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              Disponível em Maputo
+              Disponível em todo Moçambique
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-[1.1] mb-6">
               PickApp — Mobilidade Inteligente em{" "}

@@ -12,7 +12,10 @@ import {
   Smartphone,
 } from "lucide-react";
 import { PLAYSTORE_USER_URL, APPSTORE_USER_URL } from "@/lib/constants";
-import categoriesImage from "@/assets/pickapp-categories.jpeg";
+import categoriesImage from "@/assets/pickapp-categories-new.jpeg";
+import passengerPromo from "@/assets/pickapp-passenger-promo.jpg";
+import passengerDiscount from "@/assets/pickapp-passenger-discount.jpeg";
+import { useState, useEffect } from "react";
 
 const howToSteps = [
   {
@@ -68,162 +71,201 @@ const safetyTips = [
   "Evite partilhar informações pessoais com o motorista.",
 ];
 
-const Passageiro = () => (
-  <>
-    <PageBanner
-      title="A Forma Mais Fácil de Se Deslocar"
-      subtitle="Viagens seguras, rápidas e acessíveis em Maputo."
-    />
+const carouselImages = [
+  { src: categoriesImage, alt: "Categorias PickApp" },
+  { src: passengerPromo, alt: "PickApp - Atendimento de alto nível" },
+  { src: passengerDiscount, alt: "PickApp - 15% desconto nas primeiras viagens" },
+];
 
-    {/* How to use */}
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
-              Como usar o PickApp
-            </h2>
-          </div>
-        </ScrollReveal>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-          {howToSteps.map((step, i) => (
-            <ScrollReveal key={step.title} delay={i * 0.1}>
-              <div className="text-center">
-                <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <step.icon className="w-7 h-7 text-accent" />
-                </div>
-                <h3 className="font-bold text-foreground mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  {step.description}
-                </p>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </div>
-    </section>
+const Passageiro = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-    {/* Categories */}
-    <section className="py-20 bg-muted/50">
-      <div className="container mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
-              Nossas Categorias
-            </h2>
-            <p className="text-muted-foreground mt-2">
-              Cada uma pensada para uma necessidade diferente
-            </p>
-          </div>
-        </ScrollReveal>
-        <ScrollReveal>
-          <div className="max-w-4xl mx-auto">
-            <img
-              src={categoriesImage}
-              alt="Categorias PickApp - Básico, Premium, Família, Luxo, Txopela, Mota, O Amarelo"
-              className="rounded-2xl shadow-lg w-full border border-border/50"
-              loading="lazy"
-            />
-          </div>
-        </ScrollReveal>
-      </div>
-    </section>
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
 
-    {/* Benefits */}
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
-              Segurança e Benefícios
-            </h2>
-          </div>
-        </ScrollReveal>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-          {benefits.map((b, i) => (
-            <ScrollReveal key={b.title} delay={i * 0.08}>
-              <div className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 flex items-start gap-4">
-                <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center shrink-0">
-                  <b.icon className="w-5 h-5 text-accent" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-foreground mb-1">{b.title}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {b.description}
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </div>
-    </section>
+  return (
+    <>
+      <PageBanner
+        title="A Forma Mais Fácil de Se Deslocar"
+        subtitle="Viagens seguras, rápidas e acessíveis em todo Moçambique."
+      />
 
-    {/* Safety Tips */}
-    <section className="py-20 bg-muted/50">
-      <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto">
+      {/* How to use */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center mb-10">
-              <AlertTriangle className="w-10 h-10 text-accent mx-auto mb-4" />
-              <h2 className="text-3xl font-extrabold text-foreground">
-                Dicas para uma Viagem Segura
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
+                Como usar o PickApp
               </h2>
             </div>
-            <div className="space-y-3">
-              {safetyTips.map((tip, i) => (
-                <div
-                  key={i}
-                  className="flex items-start gap-3 bg-card rounded-xl px-5 py-4 border border-border/50"
-                >
-                  <CheckCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                  <span className="text-foreground text-sm">{tip}</span>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {howToSteps.map((step, i) => (
+              <ScrollReveal key={step.title} delay={i * 0.1}>
+                <div className="text-center">
+                  <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <step.icon className="w-7 h-7 text-accent" />
+                  </div>
+                  <h3 className="font-bold text-foreground mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {step.description}
+                  </p>
                 </div>
-              ))}
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Carousel */}
+      <section className="py-20 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
+                Conheça o PickApp
+              </h2>
+              <p className="text-muted-foreground mt-2">
+                Tudo pensado para a sua comodidade
+              </p>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal>
+            <div className="max-w-4xl mx-auto relative overflow-hidden rounded-2xl shadow-lg border border-border/50">
+              <div
+                className="flex transition-transform duration-700 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {carouselImages.map((img, i) => (
+                  <img
+                    key={i}
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full flex-shrink-0 object-contain"
+                    loading="lazy"
+                  />
+                ))}
+              </div>
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                {carouselImages.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrentSlide(i)}
+                    className={`w-3 h-3 rounded-full transition-all ${
+                      currentSlide === i
+                        ? "bg-accent scale-110"
+                        : "bg-primary-foreground/40"
+                    }`}
+                    aria-label={`Slide ${i + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </ScrollReveal>
         </div>
-      </div>
-    </section>
+      </section>
 
-    {/* CTA */}
-    <section className="py-20 bg-primary">
-      <div className="container mx-auto px-4 text-center">
-        <ScrollReveal>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-primary-foreground mb-4">
-            Pronto para viajar?
-          </h2>
-          <p className="text-lg text-primary-foreground/70 mb-8">
-            Baixe o PickApp e comece a viajar com segurança e conforto.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild variant="accent" size="lg">
-              <a
-                href={PLAYSTORE_USER_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Download className="w-5 h-5" />
-                Google Play
-              </a>
-            </Button>
-            <Button asChild variant="heroOutline" size="lg">
-              <a
-                href={APPSTORE_USER_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Download className="w-5 h-5" />
-                App Store
-              </a>
-            </Button>
+      {/* Benefits */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
+                Segurança e Benefícios
+              </h2>
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {benefits.map((b, i) => (
+              <ScrollReveal key={b.title} delay={i * 0.08}>
+                <div className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 flex items-start gap-4">
+                  <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center shrink-0">
+                    <b.icon className="w-5 h-5 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground mb-1">{b.title}</h3>
+                    <p className="text-sm text-muted-foreground">
+                      {b.description}
+                    </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
-        </ScrollReveal>
-      </div>
-    </section>
-  </>
-);
+        </div>
+      </section>
+
+      {/* Safety Tips */}
+      <section className="py-20 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto">
+            <ScrollReveal>
+              <div className="text-center mb-10">
+                <AlertTriangle className="w-10 h-10 text-accent mx-auto mb-4" />
+                <h2 className="text-3xl font-extrabold text-foreground">
+                  Dicas para uma Viagem Segura
+                </h2>
+              </div>
+              <div className="space-y-3">
+                {safetyTips.map((tip, i) => (
+                  <div
+                    key={i}
+                    className="flex items-start gap-3 bg-card rounded-xl px-5 py-4 border border-border/50"
+                  >
+                    <CheckCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                    <span className="text-foreground text-sm">{tip}</span>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-primary">
+        <div className="container mx-auto px-4 text-center">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-primary-foreground mb-4">
+              Pronto para viajar?
+            </h2>
+            <p className="text-lg text-primary-foreground/70 mb-8">
+              Baixe o PickApp e comece a viajar com segurança e conforto.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild variant="accent" size="lg">
+                <a
+                  href={PLAYSTORE_USER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download className="w-5 h-5" />
+                  Google Play
+                </a>
+              </Button>
+              <Button asChild variant="heroOutline" size="lg">
+                <a
+                  href={APPSTORE_USER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download className="w-5 h-5" />
+                  App Store
+                </a>
+              </Button>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+    </>
+  );
+};
 
 export default Passageiro;

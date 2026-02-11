@@ -9,7 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Trash2, Pencil, Plus, Search } from "lucide-react";
 import type { Tables } from "@/integrations/supabase/types";
 
-type Ativacao = Tables<"ativacoes_motoristas">;
+type Ativacao = Tables<"activacoes_motoristas">;
 
 export default function AtivacoesAdmin() {
   const [data, setData] = useState<Ativacao[]>([]);
@@ -21,7 +21,7 @@ export default function AtivacoesAdmin() {
 
   const fetchData = async () => {
     setLoading(true);
-    const { data: rows } = await supabase.from("ativacoes_motoristas").select("*").order("criado_em", { ascending: false });
+    const { data: rows } = await supabase.from("activacoes_motoristas").select("*").order("created_at", { ascending: false });
     setData(rows || []);
     setLoading(false);
   };
@@ -30,7 +30,7 @@ export default function AtivacoesAdmin() {
 
   const handleDelete = async (id: string) => {
     if (!confirm("Apagar esta ativação?")) return;
-    await supabase.from("ativacoes_motoristas").delete().eq("id", id);
+    await supabase.from("activacoes_motoristas").delete().eq("id", id);
     toast({ title: "Ativação apagada" });
     fetchData();
   };
@@ -39,17 +39,18 @@ export default function AtivacoesAdmin() {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
     const payload = {
-      motorista_id: fd.get("motorista_id") as string || null,
-      data_followup: fd.get("data_followup") as string || null,
-      resultado: fd.get("resultado") as string || null,
-      notas: fd.get("notas") as string || null,
+      local: fd.get("local") as string || null,
+      data: fd.get("data") as string || new Date().toISOString().split("T")[0],
+      motoristas_abordados: Number(fd.get("motoristas_abordados")) || 0,
+      motoristas_registados: Number(fd.get("motoristas_registados")) || 0,
+      observacoes: fd.get("observacoes") as string || null,
     };
 
     if (editItem) {
-      await supabase.from("ativacoes_motoristas").update(payload).eq("id", editItem.id);
+      await supabase.from("activacoes_motoristas").update(payload).eq("id", editItem.id);
       toast({ title: "Ativação atualizada" });
     } else {
-      await supabase.from("ativacoes_motoristas").insert(payload);
+      await supabase.from("activacoes_motoristas").insert(payload);
       toast({ title: "Ativação adicionada" });
     }
     setDialogOpen(false);
@@ -58,8 +59,8 @@ export default function AtivacoesAdmin() {
   };
 
   const filtered = data.filter((a) =>
-    (a.resultado || "").toLowerCase().includes(search.toLowerCase()) ||
-    (a.notas || "").toLowerCase().includes(search.toLowerCase())
+    (a.local || "").toLowerCase().includes(search.toLowerCase()) ||
+    (a.observacoes || "").toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -73,10 +74,11 @@ export default function AtivacoesAdmin() {
           <DialogContent>
             <DialogHeader><DialogTitle>{editItem ? "Editar" : "Nova"} Ativação</DialogTitle></DialogHeader>
             <form onSubmit={handleSave} className="space-y-3">
-              <div><Label>ID Motorista</Label><Input name="motorista_id" defaultValue={editItem?.motorista_id || ""} /></div>
-              <div><Label>Data Follow-up</Label><Input name="data_followup" type="date" defaultValue={editItem?.data_followup || ""} /></div>
-              <div><Label>Resultado</Label><Input name="resultado" defaultValue={editItem?.resultado || ""} /></div>
-              <div><Label>Notas</Label><Input name="notas" defaultValue={editItem?.notas || ""} /></div>
+              <div><Label>Local</Label><Input name="local" defaultValue={editItem?.local || ""} /></div>
+              <div><Label>Data</Label><Input name="data" type="date" defaultValue={editItem?.data || ""} /></div>
+              <div><Label>Motoristas Abordados</Label><Input name="motoristas_abordados" type="number" defaultValue={editItem?.motoristas_abordados || 0} /></div>
+              <div><Label>Motoristas Registados</Label><Input name="motoristas_registados" type="number" defaultValue={editItem?.motoristas_registados || 0} /></div>
+              <div><Label>Observações</Label><Input name="observacoes" defaultValue={editItem?.observacoes || ""} /></div>
               <Button type="submit" className="w-full">Guardar</Button>
             </form>
           </DialogContent>
@@ -93,11 +95,11 @@ export default function AtivacoesAdmin() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Motorista ID</TableHead>
-                <TableHead>Follow-up</TableHead>
-                <TableHead>Resultado</TableHead>
-                <TableHead>Notas</TableHead>
-                <TableHead>Criado em</TableHead>
+                <TableHead>Local</TableHead>
+                <TableHead>Data</TableHead>
+                <TableHead>Abordados</TableHead>
+                <TableHead>Registados</TableHead>
+                <TableHead>Observações</TableHead>
                 <TableHead>Ações</TableHead>
               </TableRow>
             </TableHeader>
@@ -106,11 +108,11 @@ export default function AtivacoesAdmin() {
                 <TableRow><TableCell colSpan={6} className="text-center text-muted-foreground py-8">Sem dados</TableCell></TableRow>
               ) : filtered.map((a) => (
                 <TableRow key={a.id}>
-                  <TableCell className="font-mono text-xs">{a.motorista_id?.slice(0, 8) || "-"}</TableCell>
-                  <TableCell>{a.data_followup || "-"}</TableCell>
-                  <TableCell>{a.resultado || "-"}</TableCell>
-                  <TableCell className="max-w-[200px] truncate">{a.notas || "-"}</TableCell>
-                  <TableCell>{a.criado_em ? new Date(a.criado_em).toLocaleDateString("pt") : "-"}</TableCell>
+                  <TableCell>{a.local || "-"}</TableCell>
+                  <TableCell>{a.data}</TableCell>
+                  <TableCell>{a.motoristas_abordados}</TableCell>
+                  <TableCell>{a.motoristas_registados}</TableCell>
+                  <TableCell className="max-w-[200px] truncate">{a.observacoes || "-"}</TableCell>
                   <TableCell>
                     <div className="flex items-center gap-1">
                       <Button size="sm" variant="ghost" onClick={() => { setEditItem(a); setDialogOpen(true); }}><Pencil className="h-4 w-4" /></Button>
