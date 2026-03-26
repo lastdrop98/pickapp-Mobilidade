@@ -108,7 +108,7 @@ const Motorista = () => {
             className="w-full h-full object-cover"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/50" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="absolute top-10 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
         <div className="container mx-auto px-4 relative z-10 text-center">
