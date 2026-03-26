@@ -1,4 +1,4 @@
-import { PageBanner } from "@/components/PageBanner";
+import passengerHeaderBg from "@/assets/pickapp-passenger-header.jpg";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
 import {
