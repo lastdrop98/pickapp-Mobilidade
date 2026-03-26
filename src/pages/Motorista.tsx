@@ -28,7 +28,7 @@ import {
 } from "lucide-react";
 import { WHATSAPP_URL, PLAYSTORE_DRIVER_URL, APPSTORE_DRIVER_URL } from "@/lib/constants";
 import { toast } from "sonner";
-import driverImage from "@/assets/pickapp-driver.jpeg";
+import driverHeaderBg from "@/assets/pickapp-driver-header.jpg";
 
 const benefits = [
   {
@@ -103,12 +103,11 @@ const Motorista = () => {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={driverImage}
+            src={driverHeaderBg}
             alt="Motorista PickApp"
             className="w-full h-full object-cover"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="absolute top-10 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
         <div className="container mx-auto px-4 relative z-10 text-center">
