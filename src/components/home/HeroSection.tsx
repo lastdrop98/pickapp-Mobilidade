@@ -11,7 +11,7 @@ export const HeroSection = () => (
     <div className="absolute inset-0">
       <img src={heroBg} alt="" className="w-full h-full object-cover" loading="eager" />
     </div>
-    <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/60" />
+    <div className="absolute inset-0 bg-black/40" />
     <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-accent/8 rounded-full blur-[100px]" />
     <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[80px]" />
 
