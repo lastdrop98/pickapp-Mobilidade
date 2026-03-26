@@ -28,7 +28,7 @@ import {
 } from "lucide-react";
 import { WHATSAPP_URL, PLAYSTORE_DRIVER_URL, APPSTORE_DRIVER_URL } from "@/lib/constants";
 import { toast } from "sonner";
-import driverImage from "@/assets/pickapp-driver.jpeg";
+import driverHeaderBg from "@/assets/pickapp-driver-header.jpg";
 
 const benefits = [
   {
