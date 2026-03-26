@@ -119,7 +119,7 @@ export const BenefitsSection = () => (
       <div className="absolute inset-0">
         <img src={driverBenefitsBg} alt="" className="w-full h-full object-cover" loading="lazy" />
       </div>
-      <div className="absolute inset-0 bg-primary/85 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/50" />
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal>
           <div className="text-center mb-16">
