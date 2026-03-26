@@ -1,4 +1,4 @@
-import { PageBanner } from "@/components/PageBanner";
+import passengerHeaderBg from "@/assets/pickapp-passenger-header.jpg";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
 import {
@@ -89,10 +89,21 @@ const Passageiro = () => {
 
   return (
     <>
-      <PageBanner
-        title="A Forma Mais Fácil de Se Deslocar"
-        subtitle="Viagens seguras, rápidas e acessíveis em todo Moçambique."
-      />
+      <section className="relative pt-32 pb-16 overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={passengerHeaderBg} alt="Passageiros PickApp" className="w-full h-full object-cover" loading="eager" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <ScrollReveal>
+            <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-4">
+              A Forma Mais Fácil de Se Deslocar
+            </h1>
+            <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
+              Viagens seguras, rápidas e acessíveis em todo Moçambique.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
 
       {/* How to use */}
       <section className="py-20 bg-background">
