@@ -9,7 +9,7 @@ import {
   INSTAGRAM_URL,
   LINKEDIN_URL,
 } from "@/lib/constants";
-import logo from "@/assets/pickapp-logo.png";
+import logo from "@/assets/pickapp-logo-footer.jpeg";
 
 const footerLinks = [
   { name: "Home", path: "/" },
@@ -26,7 +26,7 @@ export const Footer = () => (
         {/* Brand */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <img src={logo} alt="PickApp" className="h-10 w-auto invert" />
+            <img src={logo} alt="PickApp" className="h-16 w-auto rounded-lg bg-white p-2" />
           </div>
           <p className="text-primary-foreground/60 text-sm leading-relaxed">
             Mobilidade inteligente em Moçambique. Viagens seguras, rápidas e com
