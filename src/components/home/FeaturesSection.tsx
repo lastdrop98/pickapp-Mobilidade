@@ -88,7 +88,7 @@ export const FeaturesSection = () => (
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {whyFeatures.map((feature, index) => (
             <ScrollReveal key={feature.title} delay={index * 0.1}>
               <div className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 hover:shadow-md hover:border-accent/30 transition-all duration-300 h-full">
@@ -122,7 +122,7 @@ export const FeaturesSection = () => (
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {steps.map((step, index) => (
             <ScrollReveal key={step.number} delay={index * 0.1}>
               <div className="text-center">

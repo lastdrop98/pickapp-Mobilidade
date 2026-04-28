@@ -26,7 +26,7 @@ export const Footer = () => (
         {/* Brand */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <img src={logo} alt="PickApp" className="h-10 w-auto brightness-0 invert" />
+            <img src={logo} alt="PickApp" className="h-10 w-auto invert" />
           </div>
           <p className="text-primary-foreground/60 text-sm leading-relaxed">
             Mobilidade inteligente em Moçambique. Viagens seguras, rápidas e com
