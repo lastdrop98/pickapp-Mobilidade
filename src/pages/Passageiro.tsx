@@ -149,19 +149,20 @@ const Passageiro = () => {
             </div>
           </ScrollReveal>
           <ScrollReveal>
-            <div className="max-w-4xl mx-auto relative overflow-hidden rounded-2xl shadow-lg border border-border/50">
+            <div className="max-w-4xl mx-auto relative overflow-hidden rounded-2xl shadow-lg border border-border/50 bg-card">
               <div
                 className="flex transition-transform duration-700 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
                 {carouselImages.map((img, i) => (
-                  <img
-                    key={i}
-                    src={img.src}
-                    alt={img.alt}
-                    className="w-full flex-shrink-0 object-contain"
-                    loading="lazy"
-                  />
+                  <div key={i} className="w-full flex-shrink-0 h-80 md:h-96 overflow-hidden">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
                 ))}
               </div>
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
