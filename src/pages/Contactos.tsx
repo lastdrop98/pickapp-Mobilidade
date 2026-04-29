@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from "lucide-react";
-import { SUPPORT_EMAIL, PHONE_NUMBER, WHATSAPP_URL } from "@/lib/constants";
+import { SUPPORT_EMAIL, PHONE_NUMBER, WHATSAPP_URL, WHATSAPP_DISPLAY } from "@/lib/constants";
 import { toast } from "sonner";
 
 const contactInfo = [
@@ -18,9 +18,15 @@ const contactInfo = [
   },
   {
     icon: Phone,
-    label: "Telefone / WhatsApp",
+    label: "Telefone",
     value: PHONE_NUMBER,
     href: `tel:${PHONE_NUMBER.replace(/\s/g, "")}`,
+  },
+  {
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: WHATSAPP_DISPLAY,
+    href: WHATSAPP_URL,
   },
   {
     icon: MapPin,
@@ -46,9 +52,12 @@ const Contactos = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success(
-      "Mensagem enviada com sucesso! Responderemos em breve."
+    const subject = encodeURIComponent(form.assunto || "Contacto via website");
+    const body = encodeURIComponent(
+      `Nome: ${form.nome}\nEmail: ${form.email}\n\n${form.mensagem}`
     );
+    window.location.href = `mailto:${SUPPORT_EMAIL}?subject=${subject}&body=${body}`;
+    toast.success("A abrir o seu email...");
     setForm({ nome: "", email: "", assunto: "", mensagem: "" });
   };
 

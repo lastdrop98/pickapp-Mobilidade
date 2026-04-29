@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle, Facebook, Instagram, Linkedin } from "lucide-react";
 import {
   PLAYSTORE_USER_URL,
   APPSTORE_USER_URL,
   SUPPORT_EMAIL,
   PHONE_NUMBER,
+  WHATSAPP_URL,
+  WHATSAPP_DISPLAY,
   FACEBOOK_URL,
   INSTAGRAM_URL,
   LINKEDIN_URL,
@@ -71,6 +73,15 @@ export const Footer = () => (
             >
               <Phone className="w-4 h-4 shrink-0" />
               {PHONE_NUMBER}
+            </a>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-accent transition-colors"
+            >
+              <MessageCircle className="w-4 h-4 shrink-0" />
+              {WHATSAPP_DISPLAY}
             </a>
             <div className="flex items-center gap-2 text-sm text-primary-foreground/60">
               <MapPin className="w-4 h-4 shrink-0" />
