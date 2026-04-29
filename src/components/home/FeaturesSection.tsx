@@ -10,7 +10,6 @@ import {
   Star,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import stepsBg from "@/assets/how-it-works-bg.jpg";
 
 const whyFeatures = [
   {
@@ -110,18 +109,14 @@ export const FeaturesSection = () => (
     </section>
 
     {/* Como funciona */}
-    <section className="relative py-20 md:py-28 overflow-hidden text-primary-foreground">
-      <div className="absolute inset-0">
-        <img src={stepsBg} alt="" className="w-full h-full object-cover" loading="lazy" />
-      </div>
-      <div className="absolute inset-0 bg-primary/85" />
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-20 md:py-28 bg-muted/50">
+      <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-16">
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">
               Passo a passo
             </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold mt-2">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mt-2">
               Como funciona?
             </h2>
           </div>
@@ -130,14 +125,14 @@ export const FeaturesSection = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {steps.map((step, index) => (
             <ScrollReveal key={step.number} delay={index * 0.1}>
-              <div className="text-center bg-primary-foreground/5 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/10 h-full">
+              <div className="text-center">
                 <div className="w-16 h-16 bg-accent text-accent-foreground rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl font-extrabold shadow-lg">
                   {step.number}
                 </div>
-                <h3 className="font-bold mb-2">
+                <h3 className="font-bold text-foreground mb-2">
                   {step.title}
                 </h3>
-                <p className="text-sm text-primary-foreground/70">
+                <p className="text-sm text-muted-foreground">
                   {step.description}
                 </p>
               </div>
