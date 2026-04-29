@@ -10,7 +10,7 @@ import {
   Star,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import stepsBg from "@/assets/hero-driver-bg.jpg";
+import stepsBg from "@/assets/how-it-works-bg.jpg";
 
 const whyFeatures = [
   {
