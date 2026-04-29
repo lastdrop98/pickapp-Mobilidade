@@ -9,7 +9,6 @@ import {
   CreditCard,
   CheckCircle,
   AlertTriangle,
-  Users,
   Smartphone,
   DollarSign,
   Zap,
@@ -44,28 +43,6 @@ const howToSteps = [
   },
 ];
 
-const benefits = [
-  {
-    icon: Shield,
-    title: "Motoristas verificados",
-    description: "Todos os motoristas passam por verificação rigorosa.",
-  },
-  {
-    icon: CreditCard,
-    title: "Preços transparentes",
-    description: "Veja o valor antes de confirmar a viagem.",
-  },
-  {
-    icon: MapPin,
-    title: "Rastreamento em tempo real",
-    description: "Acompanhe a rota durante toda a viagem.",
-  },
-  {
-    icon: Users,
-    title: "Avaliações de motoristas",
-    description: "Veja as avaliações antes de embarcar.",
-  },
-];
 
 const passengerHighlights = [
   {
@@ -252,36 +229,6 @@ const Passageiro = () => {
               </div>
             </div>
           </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Benefits */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
-                Segurança e Benefícios
-              </h2>
-            </div>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            {benefits.map((b, i) => (
-              <ScrollReveal key={b.title} delay={i * 0.08}>
-                <div className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 flex items-start gap-4">
-                  <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center shrink-0">
-                    <b.icon className="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-foreground mb-1">{b.title}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {b.description}
-                    </p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
         </div>
       </section>
 
