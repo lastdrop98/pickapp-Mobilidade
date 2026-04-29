@@ -1,6 +1,6 @@
 import { PageBanner } from "@/components/PageBanner";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { Target, Eye, Heart, Users } from "lucide-react";
+import { Target, Eye, Heart } from "lucide-react";
 
 const values = [
   {
@@ -20,27 +20,6 @@ const values = [
     title: "Valores",
     description:
       "Segurança, transparência, inovação, respeito e compromisso com a comunidade local.",
-  },
-];
-
-const team = [
-  {
-    name: "João Macamo",
-    role: "CEO & Fundador",
-    bio: "Empreendedor apaixonado por tecnologia e mobilidade urbana em África.",
-    initials: "JM",
-  },
-  {
-    name: "Lúcia Tembe",
-    role: "CTO",
-    bio: "Engenheira de software com experiência em startups de tecnologia.",
-    initials: "LT",
-  },
-  {
-    name: "Pedro Mazive",
-    role: "Director de Operações",
-    bio: "Especialista em logística e operações com foco no mercado moçambicano.",
-    initials: "PM",
   },
 ];
 
@@ -114,38 +93,6 @@ const Sobre = () => (
       </div>
     </section>
 
-    {/* Team */}
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
-              Nossa Equipa
-            </h2>
-          </div>
-        </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          {team.map((member, i) => (
-            <ScrollReveal key={member.name} delay={i * 0.1}>
-              <div className="bg-card rounded-2xl p-8 shadow-sm border border-border/50 text-center">
-                <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-5">
-                  <span className="text-accent font-extrabold text-xl">
-                    {member.initials}
-                  </span>
-                </div>
-                <h3 className="text-lg font-bold text-foreground">
-                  {member.name}
-                </h3>
-                <p className="text-accent font-medium text-sm mb-3">
-                  {member.role}
-                </p>
-                <p className="text-sm text-muted-foreground">{member.bio}</p>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </div>
-    </section>
   </>
 );
 
