@@ -9,7 +9,6 @@ import {
   CreditCard,
   CheckCircle,
   AlertTriangle,
-  Users,
   Smartphone,
   DollarSign,
   Zap,
@@ -44,28 +43,6 @@ const howToSteps = [
   },
 ];
 
-const benefits = [
-  {
-    icon: Shield,
-    title: "Motoristas verificados",
-    description: "Todos os motoristas passam por verificação rigorosa.",
-  },
-  {
-    icon: CreditCard,
-    title: "Preços transparentes",
-    description: "Veja o valor antes de confirmar a viagem.",
-  },
-  {
-    icon: MapPin,
-    title: "Rastreamento em tempo real",
-    description: "Acompanhe a rota durante toda a viagem.",
-  },
-  {
-    icon: Users,
-    title: "Avaliações de motoristas",
-    description: "Veja as avaliações antes de embarcar.",
-  },
-];
 
 const passengerHighlights = [
   {
