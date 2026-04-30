@@ -55,7 +55,7 @@ export const Navbar = () => {
                   ? "text-accent"
                   : isTransparent
                   ? "text-primary-foreground/80 hover:text-primary-foreground"
-                  : "text-muted-foreground hover:text-foreground"
+                  : "text-primary-foreground/80 hover:text-primary-foreground"
               }`}
             >
               {link.name}
