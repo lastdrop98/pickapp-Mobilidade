@@ -73,9 +73,7 @@ export const Navbar = () => {
           </Button>
 
           <button
-            className={`md:hidden p-2 transition-colors ${
-              isTransparent ? "text-primary-foreground" : "text-foreground"
-            }`}
+            className={`md:hidden p-2 transition-colors text-primary-foreground`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Menu"
           >
