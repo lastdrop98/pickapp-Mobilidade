@@ -260,9 +260,15 @@ const Passageiro = () => {
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
-                Segurança e Benefícios
+              <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+                A sua segurança em primeiro lugar
+              </span>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mt-2">
+                Viaje com tranquilidade
               </h2>
+              <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
+                Recursos pensados para garantir a sua segurança em todas as viagens.
+              </p>
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
