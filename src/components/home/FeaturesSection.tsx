@@ -110,8 +110,18 @@ export const FeaturesSection = () => (
     </section>
 
     {/* Como funciona */}
-    <section className="py-20 md:py-28 bg-muted/50">
-      <div className="container mx-auto px-4">
+    <section className="relative py-20 md:py-28 overflow-hidden">
+      <div className="absolute inset-0">
+        <img
+          src={howItWorksBg}
+          alt=""
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+        {/* Light neutral overlay only to keep text legible — no blue tint */}
+        <div className="absolute inset-0 bg-background/70 backdrop-blur-[2px]" />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal>
           <div className="text-center mb-16">
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">
@@ -126,7 +136,7 @@ export const FeaturesSection = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {steps.map((step, index) => (
             <ScrollReveal key={step.number} delay={index * 0.1}>
-              <div className="text-center">
+              <div className="text-center bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border/50 shadow-sm h-full">
                 <div className="w-16 h-16 bg-accent text-accent-foreground rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl font-extrabold shadow-lg">
                   {step.number}
                 </div>
