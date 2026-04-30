@@ -11,9 +11,6 @@ import {
   AlertTriangle,
   Users,
   Smartphone,
-  DollarSign,
-  Zap,
-  Headphones,
 } from "lucide-react";
 import { PLAYSTORE_USER_URL, APPSTORE_USER_URL } from "@/lib/constants";
 import categoriesImage from "@/assets/pickapp-categories-new.jpeg";
@@ -64,34 +61,6 @@ const benefits = [
     icon: Users,
     title: "Avaliações de motoristas",
     description: "Veja as avaliações antes de embarcar.",
-  },
-];
-
-const passengerHighlights = [
-  {
-    icon: DollarSign,
-    title: "Viagem Mínima Acessível",
-    description: "Valores que cabem no seu bolso.",
-  },
-  {
-    icon: MapPin,
-    title: "Motoristas Próximos",
-    description: "Sempre há um motorista perto de si.",
-  },
-  {
-    icon: Zap,
-    title: "Atendimento Rápido",
-    description: "Sem longas esperas.",
-  },
-  {
-    icon: CreditCard,
-    title: "Pagamento Digital",
-    description: "Opções de pagamento modernas.",
-  },
-  {
-    icon: Headphones,
-    title: "Suporte em Moçambique",
-    description: "Equipa local pronta para ajudar.",
   },
 ];
 
@@ -168,7 +137,7 @@ const Passageiro = () => {
       </section>
 
 
-      {/* Visual Benefits with background image */}
+      {/* Safety section with background image */}
       <section className="relative py-20 md:py-28 text-primary-foreground overflow-hidden min-h-[500px] flex items-center">
         <div className="absolute inset-0">
           <img
@@ -183,16 +152,16 @@ const Passageiro = () => {
           <ScrollReveal>
             <div className="text-center mb-14">
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                Para passageiros
+                Sua segurança em primeiro lugar
               </span>
               <h2 className="text-3xl md:text-4xl font-extrabold mt-2">
-                Benefícios para Passageiros
+                Viaje com total tranquilidade
               </h2>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {passengerHighlights.map((b, i) => (
-              <ScrollReveal key={b.title} delay={i * 0.08}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {benefits.map((b, i) => (
+              <ScrollReveal key={`safety-${b.title}`} delay={i * 0.08}>
                 <div className="bg-primary-foreground/5 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/10 hover:border-accent/30 transition-all h-full text-center">
                   <div className="w-12 h-12 bg-accent/15 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <b.icon className="w-6 h-6 text-accent" />
@@ -252,36 +221,6 @@ const Passageiro = () => {
               </div>
             </div>
           </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Benefits */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
-                Segurança e Benefícios
-              </h2>
-            </div>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            {benefits.map((b, i) => (
-              <ScrollReveal key={b.title} delay={i * 0.08}>
-                <div className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 flex items-start gap-4">
-                  <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center shrink-0">
-                    <b.icon className="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-foreground mb-1">{b.title}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {b.description}
-                    </p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
         </div>
       </section>
 
