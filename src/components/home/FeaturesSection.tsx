@@ -118,8 +118,6 @@ export const FeaturesSection = () => (
           className="w-full h-full object-cover"
           loading="lazy"
         />
-        {/* Light neutral overlay only to keep text legible — no blue tint */}
-        <div className="absolute inset-0 bg-background/70 backdrop-blur-[2px]" />
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal>
