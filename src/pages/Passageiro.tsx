@@ -11,9 +11,6 @@ import {
   AlertTriangle,
   Users,
   Smartphone,
-  DollarSign,
-  Zap,
-  Headphones,
 } from "lucide-react";
 import { PLAYSTORE_USER_URL, APPSTORE_USER_URL } from "@/lib/constants";
 import categoriesImage from "@/assets/pickapp-categories-new.jpeg";
