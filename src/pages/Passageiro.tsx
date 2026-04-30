@@ -48,22 +48,22 @@ const benefits = [
   {
     icon: Shield,
     title: "Motoristas verificados",
-    description: "Todos os motoristas passam por verificação rigorosa.",
-  },
-  {
-    icon: CreditCard,
-    title: "Preços transparentes",
-    description: "Veja o valor antes de confirmar a viagem.",
+    description: "Todos os motoristas passam por verificação rigorosa de identidade e documentos.",
   },
   {
     icon: MapPin,
     title: "Rastreamento em tempo real",
-    description: "Acompanhe a rota durante toda a viagem.",
+    description: "Acompanhe a rota da sua viagem do início ao fim pelo mapa.",
   },
   {
     icon: Users,
-    title: "Avaliações de motoristas",
-    description: "Veja as avaliações antes de embarcar.",
+    title: "Partilhe a sua viagem",
+    description: "Envie a localização a familiares e amigos com um toque.",
+  },
+  {
+    icon: AlertTriangle,
+    title: "Botão de emergência",
+    description: "Acione o suporte ou contactos de emergência em caso de incidente.",
   },
 ];
 
