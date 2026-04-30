@@ -174,7 +174,7 @@ const Motorista = () => {
         </div>
       </section>
 
-      {/* Visual Benefits with background image */}
+      {/* Driver Stories / Why join PickApp */}
       <section className="relative py-20 md:py-28 text-primary-foreground overflow-hidden min-h-[500px] flex items-center">
         <div className="absolute inset-0">
           <img
@@ -187,29 +187,51 @@ const Motorista = () => {
         <div className="absolute inset-0 bg-black/60" />
         <div className="container mx-auto px-4 relative z-10 w-full">
           <ScrollReveal>
-            <div className="text-center mb-14">
+            <div className="text-center mb-14 max-w-3xl mx-auto">
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                Para motoristas
+                Junte-se à comunidade
               </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold mt-2">
-                Benefícios para Motoristas
+              <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-4">
+                Faça parte da maior rede de motoristas em Moçambique
               </h2>
+              <p className="text-primary-foreground/75 text-lg">
+                Conduza no seu ritmo, escolha as melhores horas do dia e
+                aumente os seus ganhos com chamadas constantes nas zonas mais
+                movimentadas de Maputo e Matola.
+              </p>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {benefits.map((b, i) => (
-              <ScrollReveal key={`vis-${b.title}`} delay={i * 0.08}>
-                <div className="bg-primary-foreground/5 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/10 hover:border-accent/30 transition-all h-full text-center">
-                  <div className="w-12 h-12 bg-accent/15 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <b.icon className="w-6 h-6 text-accent" />
-                  </div>
-                  <h3 className="font-bold mb-2">{b.title}</h3>
-                  <p className="text-sm text-primary-foreground/70">
-                    {b.description}
-                  </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <ScrollReveal delay={0.05}>
+              <div className="bg-primary-foreground/5 backdrop-blur-sm rounded-2xl p-8 border border-primary-foreground/10 text-center">
+                <div className="text-4xl md:text-5xl font-extrabold text-accent mb-2">
+                  100%
                 </div>
-              </ScrollReveal>
-            ))}
+                <p className="text-sm text-primary-foreground/80">
+                  Dos ganhos das viagens são seus
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.15}>
+              <div className="bg-primary-foreground/5 backdrop-blur-sm rounded-2xl p-8 border border-primary-foreground/10 text-center">
+                <div className="text-4xl md:text-5xl font-extrabold text-accent mb-2">
+                  24/7
+                </div>
+                <p className="text-sm text-primary-foreground/80">
+                  Suporte sempre disponível para si
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.25}>
+              <div className="bg-primary-foreground/5 backdrop-blur-sm rounded-2xl p-8 border border-primary-foreground/10 text-center">
+                <div className="text-4xl md:text-5xl font-extrabold text-accent mb-2">
+                  +1000
+                </div>
+                <p className="text-sm text-primary-foreground/80">
+                  Motoristas ativos na nossa plataforma
+                </p>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
