@@ -64,34 +64,6 @@ const benefits = [
   },
 ];
 
-const passengerHighlights = [
-  {
-    icon: DollarSign,
-    title: "Viagem Mínima Acessível",
-    description: "Valores que cabem no seu bolso.",
-  },
-  {
-    icon: MapPin,
-    title: "Motoristas Próximos",
-    description: "Sempre há um motorista perto de si.",
-  },
-  {
-    icon: Zap,
-    title: "Atendimento Rápido",
-    description: "Sem longas esperas.",
-  },
-  {
-    icon: CreditCard,
-    title: "Pagamento Digital",
-    description: "Opções de pagamento modernas.",
-  },
-  {
-    icon: Headphones,
-    title: "Suporte em Moçambique",
-    description: "Equipa local pronta para ajudar.",
-  },
-];
-
 const safetyTips = [
   "Confirme sempre a placa do veículo antes de entrar.",
   "Partilhe a sua viagem em tempo real com familiares.",
