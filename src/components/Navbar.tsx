@@ -33,9 +33,9 @@ export const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || isOpen
-          ? "bg-primary/95 backdrop-blur-md shadow-lg border-b border-primary-foreground/10"
-          : "bg-primary/60 backdrop-blur-sm"
+        isTransparent
+          ? "bg-transparent"
+          : "bg-card/95 backdrop-blur-md shadow-lg border-b border-border/50"
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
@@ -53,7 +53,9 @@ export const Navbar = () => {
               className={`text-sm font-medium transition-colors ${
                 location.pathname === link.path
                   ? "text-accent"
-                  : "text-primary-foreground/80 hover:text-primary-foreground"
+                  : isTransparent
+                  ? "text-primary-foreground/80 hover:text-primary-foreground"
+                  : "text-muted-foreground hover:text-foreground"
               }`}
             >
               {link.name}
@@ -71,7 +73,9 @@ export const Navbar = () => {
           </Button>
 
           <button
-            className="md:hidden p-2 transition-colors text-primary-foreground"
+            className={`md:hidden p-2 transition-colors ${
+              isTransparent ? "text-primary-foreground" : "text-foreground"
+            }`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Menu"
           >
@@ -82,8 +86,8 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 bg-primary/95 backdrop-blur-md ${
-          isOpen ? "max-h-[400px] border-t border-primary-foreground/10" : "max-h-0"
+        className={`md:hidden overflow-hidden transition-all duration-300 bg-card/95 backdrop-blur-md ${
+          isOpen ? "max-h-[400px] border-t border-border/50" : "max-h-0"
         }`}
       >
         <div className="container mx-auto px-4 py-4 flex flex-col gap-1">
@@ -94,7 +98,7 @@ export const Navbar = () => {
               className={`py-3 px-4 rounded-lg text-sm font-medium transition-colors ${
                 location.pathname === link.path
                   ? "text-accent bg-accent/10"
-                  : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/5"
+                  : "text-muted-foreground hover:text-foreground hover:bg-muted"
               }`}
             >
               {link.name}
