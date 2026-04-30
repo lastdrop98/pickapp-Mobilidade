@@ -146,26 +146,67 @@ const Motorista = () => {
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* How to start */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
-                Vantagens de ser motorista PickApp
+              <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+                Passo a passo
+              </span>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mt-2">
+                Como começar a dirigir com a PickApp
               </h2>
+              <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
+                Em poucos passos estará pronto para receber chamadas e gerar
+                rendimento com o seu veículo.
+              </p>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {benefits.map((b, i) => (
-              <ScrollReveal key={b.title} delay={i * 0.08}>
-                <div className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 h-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {[
+              {
+                number: "01",
+                icon: FileText,
+                title: "Faça o pré-cadastro",
+                description:
+                  "Preencha o formulário com os seus dados de contacto e veículo.",
+              },
+              {
+                number: "02",
+                icon: CheckCircle,
+                title: "Envie os documentos",
+                description:
+                  "BI, carta de condução e livreto do veículo para validação.",
+              },
+              {
+                number: "03",
+                icon: Download,
+                title: "Instale o app",
+                description:
+                  "Baixe o PickApp Driver na Play Store ou App Store.",
+              },
+              {
+                number: "04",
+                icon: Car,
+                title: "Comece a dirigir",
+                description:
+                  "Receba chamadas próximas e ganhe a cada viagem concluída.",
+              },
+            ].map((step, i) => (
+              <ScrollReveal key={step.number} delay={i * 0.08}>
+                <div className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 h-full relative">
+                  <span className="absolute top-4 right-5 text-3xl font-extrabold text-accent/20">
+                    {step.number}
+                  </span>
                   <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
-                    <b.icon className="w-6 h-6 text-accent" />
+                    <step.icon className="w-6 h-6 text-accent" />
                   </div>
-                  <h3 className="font-bold text-foreground mb-2">{b.title}</h3>
+                  <h3 className="font-bold text-foreground mb-2">
+                    {step.title}
+                  </h3>
                   <p className="text-sm text-muted-foreground">
-                    {b.description}
+                    {step.description}
                   </p>
                 </div>
               </ScrollReveal>
