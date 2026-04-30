@@ -96,7 +96,7 @@ export const Navbar = () => {
               className={`py-3 px-4 rounded-lg text-sm font-medium transition-colors ${
                 location.pathname === link.path
                   ? "text-accent bg-accent/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
               }`}
             >
               {link.name}
