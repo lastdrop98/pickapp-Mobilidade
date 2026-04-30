@@ -10,6 +10,7 @@ import {
   Star,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import howItWorksBg from "@/assets/how-it-works-bg.jpg";
 
 const whyFeatures = [
   {
