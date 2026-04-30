@@ -84,8 +84,8 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 bg-card/95 backdrop-blur-md ${
-          isOpen ? "max-h-[400px] border-t border-border/50" : "max-h-0"
+        className={`md:hidden overflow-hidden transition-all duration-300 bg-primary/95 backdrop-blur-md ${
+          isOpen ? "max-h-[400px] border-t border-primary-foreground/10" : "max-h-0"
         }`}
       >
         <div className="container mx-auto px-4 py-4 flex flex-col gap-1">
