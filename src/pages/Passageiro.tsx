@@ -336,7 +336,7 @@ const Passageiro = () => {
                   rel="noopener noreferrer"
                 >
                   <Download className="w-5 h-5" />
-                  Google Play
+                  Google Play — Passageiro
                 </a>
               </Button>
               <Button asChild variant="heroOutline" size="lg">
@@ -346,7 +346,7 @@ const Passageiro = () => {
                   rel="noopener noreferrer"
                 >
                   <Download className="w-5 h-5" />
-                  App Store
+                  App Store — Passageiro
                 </a>
               </Button>
             </div>

@@ -128,7 +128,7 @@ const Motorista = () => {
                   rel="noopener noreferrer"
                 >
                   <Download className="w-5 h-5" />
-                  Google Play
+                  Google Play — Motorista
                 </a>
               </Button>
               <Button asChild variant="heroOutline" size="lg">
@@ -138,7 +138,7 @@ const Motorista = () => {
                   rel="noopener noreferrer"
                 >
                   <Download className="w-5 h-5" />
-                  App Store
+                  App Store — Motorista
                 </a>
               </Button>
             </div>

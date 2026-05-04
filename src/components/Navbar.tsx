@@ -68,7 +68,7 @@ export const Navbar = () => {
           <Button asChild variant="accent" size="sm" className="hidden md:inline-flex">
             <a href={PLAYSTORE_URL} target="_blank" rel="noopener noreferrer">
               <Download className="w-4 h-4" />
-              Baixar App
+              Baixar App Passageiro
             </a>
           </Button>
 
@@ -105,7 +105,7 @@ export const Navbar = () => {
           <Button asChild variant="accent" className="mt-3">
             <a href={PLAYSTORE_URL} target="_blank" rel="noopener noreferrer">
               <Download className="w-4 h-4" />
-              Baixar App
+              Baixar App Passageiro
             </a>
           </Button>
         </div>
