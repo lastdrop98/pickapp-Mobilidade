@@ -32,10 +32,39 @@ export const Footer = () => (
           <div className="flex items-center gap-2 mb-4">
             <img src={logo} alt="PickApp" className="h-16 w-auto rounded-lg bg-white p-2" />
           </div>
-          <p className="text-primary-foreground/60 text-sm leading-relaxed">
+          <p className="text-primary-foreground/60 text-sm leading-relaxed mb-6">
             Mobilidade inteligente em Moçambique. Viagens seguras, rápidas e com
             preços justos.
           </p>
+          <div className="flex gap-3">
+            <a
+              href={FACEBOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-xl bg-primary-foreground/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all"
+              aria-label="Facebook"
+            >
+              <Facebook className="w-5 h-5" />
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-xl bg-primary-foreground/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all"
+              aria-label="Instagram"
+            >
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-xl bg-primary-foreground/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-5 h-5" />
+            </a>
+          </div>
         </div>
 
         {/* Links */}
@@ -92,46 +121,16 @@ export const Footer = () => (
           </div>
         </div>
 
-        {/* Social + Download */}
+        {/* Download */}
         <div>
           <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider text-primary-foreground/80">
-            Redes Sociais
+            Baixar Apps
           </h4>
-          <div className="flex gap-3 mb-6">
-            <a
-              href={FACEBOOK_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-xl bg-primary-foreground/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all"
-              aria-label="Facebook"
-            >
-              <Facebook className="w-5 h-5" />
-            </a>
-            <a
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-xl bg-primary-foreground/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all"
-              aria-label="Instagram"
-            >
-              <Instagram className="w-5 h-5" />
-            </a>
-            <a
-              href={LINKEDIN_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-xl bg-primary-foreground/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-          </div>
-
-          <div className="space-y-5">
+          <div className="flex flex-col gap-4">
             <div>
-              <h4 className="font-semibold mb-3 text-xs uppercase tracking-wider text-accent">
-                App Passageiro
-              </h4>
+              <p className="text-xs uppercase tracking-wider text-accent mb-2 font-semibold">
+                Passageiro
+              </p>
               <div className="flex flex-row gap-2">
                 <a
                   href={PLAYSTORE_USER_URL}
@@ -153,9 +152,9 @@ export const Footer = () => (
             </div>
 
             <div>
-              <h4 className="font-semibold mb-3 text-xs uppercase tracking-wider text-accent">
-                App Motorista
-              </h4>
+              <p className="text-xs uppercase tracking-wider text-accent mb-2 font-semibold">
+                Motorista
+              </p>
               <div className="flex flex-row gap-2">
                 <a
                   href={PLAYSTORE_DRIVER_URL}
