@@ -3,6 +3,8 @@ import { Mail, Phone, MapPin, MessageCircle, Facebook, Instagram, Linkedin } fro
 import {
   PLAYSTORE_USER_URL,
   APPSTORE_USER_URL,
+  PLAYSTORE_DRIVER_URL,
+  APPSTORE_DRIVER_URL,
   SUPPORT_EMAIL,
   PHONE_NUMBER,
   WHATSAPP_URL,
@@ -125,26 +127,54 @@ export const Footer = () => (
             </a>
           </div>
 
-          <h4 className="font-semibold mb-3 text-sm uppercase tracking-wider text-primary-foreground/80">
-            Baixar App Passageiro
-          </h4>
-          <div className="flex flex-col gap-2">
-            <a
-              href={PLAYSTORE_USER_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 bg-accent text-accent-foreground rounded-xl text-sm font-semibold hover:bg-accent/90 transition-colors"
-            >
-              Google Play — Passageiro
-            </a>
-            <a
-              href={APPSTORE_USER_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 bg-primary-foreground/10 text-primary-foreground rounded-xl text-sm font-semibold hover:bg-primary-foreground/20 transition-colors"
-            >
-              App Store — Passageiro
-            </a>
+          <div className="space-y-5">
+            <div>
+              <h4 className="font-semibold mb-3 text-xs uppercase tracking-wider text-accent">
+                App Passageiro
+              </h4>
+              <div className="flex flex-col gap-2">
+                <a
+                  href={PLAYSTORE_USER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-accent text-accent-foreground rounded-xl text-sm font-semibold hover:bg-accent/90 transition-colors"
+                >
+                  Google Play
+                </a>
+                <a
+                  href={APPSTORE_USER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-primary-foreground/10 text-primary-foreground rounded-xl text-sm font-semibold hover:bg-primary-foreground/20 transition-colors"
+                >
+                  App Store
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-3 text-xs uppercase tracking-wider text-accent">
+                App Motorista
+              </h4>
+              <div className="flex flex-col gap-2">
+                <a
+                  href={PLAYSTORE_DRIVER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-accent text-accent-foreground rounded-xl text-sm font-semibold hover:bg-accent/90 transition-colors"
+                >
+                  Google Play
+                </a>
+                <a
+                  href={APPSTORE_DRIVER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-primary-foreground/10 text-primary-foreground rounded-xl text-sm font-semibold hover:bg-primary-foreground/20 transition-colors"
+                >
+                  App Store
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
