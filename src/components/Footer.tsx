@@ -132,12 +132,12 @@ export const Footer = () => (
               <h4 className="font-semibold mb-3 text-xs uppercase tracking-wider text-accent">
                 App Passageiro
               </h4>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-row gap-2">
                 <a
                   href={PLAYSTORE_USER_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-accent text-accent-foreground rounded-xl text-sm font-semibold hover:bg-accent/90 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-3 py-2.5 bg-accent text-accent-foreground rounded-xl text-sm font-semibold hover:bg-accent/90 transition-colors flex-1"
                 >
                   Google Play
                 </a>
@@ -145,7 +145,7 @@ export const Footer = () => (
                   href={APPSTORE_USER_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-primary-foreground/10 text-primary-foreground rounded-xl text-sm font-semibold hover:bg-primary-foreground/20 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-3 py-2.5 bg-primary-foreground/10 text-primary-foreground rounded-xl text-sm font-semibold hover:bg-primary-foreground/20 transition-colors flex-1"
                 >
                   App Store
                 </a>
@@ -156,12 +156,12 @@ export const Footer = () => (
               <h4 className="font-semibold mb-3 text-xs uppercase tracking-wider text-accent">
                 App Motorista
               </h4>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-row gap-2">
                 <a
                   href={PLAYSTORE_DRIVER_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-accent text-accent-foreground rounded-xl text-sm font-semibold hover:bg-accent/90 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-3 py-2.5 bg-accent text-accent-foreground rounded-xl text-sm font-semibold hover:bg-accent/90 transition-colors flex-1"
                 >
                   Google Play
                 </a>
@@ -169,7 +169,7 @@ export const Footer = () => (
                   href={APPSTORE_DRIVER_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-primary-foreground/10 text-primary-foreground rounded-xl text-sm font-semibold hover:bg-primary-foreground/20 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-3 py-2.5 bg-primary-foreground/10 text-primary-foreground rounded-xl text-sm font-semibold hover:bg-primary-foreground/20 transition-colors flex-1"
                 >
                   App Store
                 </a>
