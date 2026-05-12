@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { PageBanner } from "@/components/PageBanner";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -63,6 +64,11 @@ const Contactos = () => {
 
   return (
     <>
+      <SEO
+        title="Contactos PickApp — Suporte e Atendimento"
+        description="Entre em contacto com a equipa PickApp. Email, telefone, WhatsApp e formulário de contacto. Suporte 24 horas em Moçambique."
+        canonical="/contactos"
+      />
       <PageBanner
         title="Contacte-nos"
         subtitle="Estamos aqui para ajudar. Entre em contacto connosco."

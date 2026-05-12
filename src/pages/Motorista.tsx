@@ -27,6 +27,7 @@ import {
   Download,
 } from "lucide-react";
 import { WHATSAPP_URL, PLAYSTORE_DRIVER_URL, APPSTORE_DRIVER_URL } from "@/lib/constants";
+import { SEO } from "@/components/SEO";
 import { toast } from "sonner";
 import driverHeaderBg from "@/assets/pickapp-driver-header.jpg";
 import driverBenefitsBg from "@/assets/driver-benefits-bg.jpg";
@@ -100,6 +101,11 @@ const Motorista = () => {
 
   return (
     <>
+      <SEO
+        title="Seja Motorista PickApp — Ganhe Dinheiro em Moçambique"
+        description="Junte-se à PickApp como motorista. Ganhos flexíveis, suporte 24h e a maior comunidade de motoristas em Maputo e Matola. Cadastre-se já."
+        canonical="/motorista"
+      />
       {/* Hero Banner with Driver Image */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
