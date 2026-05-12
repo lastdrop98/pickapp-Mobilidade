@@ -6,11 +6,28 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "react-snap || echo 'react-snap prerender skipped'",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"
+  },
+  "reactSnap": {
+    "source": "dist",
+    "include": [
+      "/",
+      "/motorista",
+      "/passageiro",
+      "/sobre",
+      "/contactos"
+    ],
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
+    "skipThirdPartyRequests": true,
+    "inlineCss": false
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
