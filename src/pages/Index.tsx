@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Users, Car, ArrowRight } from "lucide-react";
+import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/home/HeroSection";
 import { FeaturesSection } from "@/components/home/FeaturesSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
@@ -73,6 +74,25 @@ const RoleSelectorSection = () => (
 
 const Index = () => (
   <>
+    <SEO
+      title="PickApp — Mobilidade Inteligente em Moçambique"
+      description="PickApp é a plataforma de mobilidade urbana em Moçambique. Viagens seguras, rápidas e com preços justos em Maputo, Matola e Zimpeto. Baixe o app para passageiros e motoristas."
+      canonical="/"
+      jsonLd={{
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "PickApp",
+        url: "https://pickapp-mobilidade.lovable.app",
+        logo: "https://pickapp-mobilidade.lovable.app/src/assets/pickapp-logo.png",
+        description:
+          "Plataforma de mobilidade urbana em Moçambique. Viagens seguras, rápidas e com preços justos.",
+        areaServed: { "@type": "Country", name: "Moçambique" },
+        sameAs: [
+          "https://www.facebook.com/pickapp",
+          "https://www.instagram.com/pickapp",
+        ],
+      }}
+    />
     <HeroSection />
     <FeaturesSection />
     <RoleSelectorSection />

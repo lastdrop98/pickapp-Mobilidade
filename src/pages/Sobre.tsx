@@ -1,5 +1,6 @@
 import { PageBanner } from "@/components/PageBanner";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { SEO } from "@/components/SEO";
 import { Target, Eye, Heart } from "lucide-react";
 
 const values = [
@@ -25,6 +26,11 @@ const values = [
 
 const Sobre = () => (
   <>
+    <SEO
+      title="Sobre a PickApp — Nossa Missão e Visão"
+      description="Conheça a história da PickApp, a plataforma de mobilidade urbana de Moçambique. Missão, visão e valores que nos guiam."
+      canonical="/sobre"
+    />
     <PageBanner
       title="Sobre a PickApp"
       subtitle="Conheça a nossa história e a equipa por trás da mobilidade inteligente."
