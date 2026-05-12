@@ -1,6 +1,7 @@
 import passengerHeaderBg from "@/assets/pickapp-passenger-header.jpg";
 import passengerBenefitsBg from "@/assets/passenger-benefits-bg.jpg";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import {
   Download,
