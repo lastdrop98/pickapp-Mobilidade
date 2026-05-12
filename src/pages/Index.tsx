@@ -75,9 +75,12 @@ const RoleSelectorSection = () => (
 const Index = () => (
   <>
     <SEO
-      title="PickApp — Mobilidade Inteligente em Moçambique"
-      description="PickApp é a plataforma de mobilidade urbana em Moçambique. Viagens seguras, rápidas e com preços justos em Maputo, Matola e Zimpeto. Baixe o app para passageiros e motoristas."
+      title="PickApp Moçambique — Táxi em Maputo a Preço Justo"
+      description="PickApp é o aplicativo de viagens em Moçambique com motoristas verificados e preço justo. Peça táxi em Maputo, Matola e Zimpeto com segurança e rapidez."
+      keywords="PickApp Moçambique, táxi Maputo, aplicativo de viagens, preço justo, motoristas verificados, transporte Moçambique, app mobilidade Maputo"
       canonical="/"
+      ogTitle="🚖 PickApp — Peça o seu táxi em Maputo em segundos"
+      ogDescription="Motoristas verificados, preço justo e viagens seguras em todo Moçambique. Baixe agora e experimente a nova forma de andar pela cidade."
       jsonLd={{
         "@context": "https://schema.org",
         "@type": "Organization",
