@@ -101,6 +101,11 @@ const Motorista = () => {
 
   return (
     <>
+      <SEO
+        title="Seja Motorista PickApp — Ganhe Dinheiro em Moçambique"
+        description="Junte-se à PickApp como motorista. Ganhos flexíveis, suporte 24h e a maior comunidade de motoristas em Maputo e Matola. Cadastre-se já."
+        canonical="/motorista"
+      />
       {/* Hero Banner with Driver Image */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
