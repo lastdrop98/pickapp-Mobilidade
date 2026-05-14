@@ -19,6 +19,8 @@ import Motorista from "./pages/Motorista";
 import Passageiro from "./pages/Passageiro";
 import Sobre from "./pages/Sobre";
 import Contactos from "./pages/Contactos";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
