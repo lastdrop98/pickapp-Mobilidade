@@ -19,6 +19,8 @@ import Motorista from "./pages/Motorista";
 import Passageiro from "./pages/Passageiro";
 import Sobre from "./pages/Sobre";
 import Contactos from "./pages/Contactos";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -65,6 +67,8 @@ const App = () => (
               <Route path="/passageiro" element={<Passageiro />} />
               <Route path="/sobre" element={<Sobre />} />
               <Route path="/contactos" element={<Contactos />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
             </Route>
             <Route path="/login" element={<Login />} />
             <Route path="/admin" element={<AdminLayout />}>

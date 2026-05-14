@@ -44,6 +44,51 @@ export type Database = {
         }
         Relationships: []
       }
+      blog_posts: {
+        Row: {
+          author: string
+          category: Database["public"]["Enums"]["blog_category"]
+          content: string
+          cover_image: string | null
+          created_at: string
+          excerpt: string
+          id: string
+          published: boolean
+          published_at: string
+          slug: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          author?: string
+          category: Database["public"]["Enums"]["blog_category"]
+          content: string
+          cover_image?: string | null
+          created_at?: string
+          excerpt: string
+          id?: string
+          published?: boolean
+          published_at?: string
+          slug: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          author?: string
+          category?: Database["public"]["Enums"]["blog_category"]
+          content?: string
+          cover_image?: string | null
+          created_at?: string
+          excerpt?: string
+          id?: string
+          published?: boolean
+          published_at?: string
+          slug?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       contactos_site: {
         Row: {
           assunto: string | null
@@ -215,6 +260,7 @@ export type Database = {
     }
     Enums: {
       app_role: "admin" | "user"
+      blog_category: "Passageiros" | "Motoristas" | "Comunicados"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -343,6 +389,7 @@ export const Constants = {
   public: {
     Enums: {
       app_role: ["admin", "user"],
+      blog_category: ["Passageiros", "Motoristas", "Comunicados"],
     },
   },
 } as const
