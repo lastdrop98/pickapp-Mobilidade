@@ -122,6 +122,14 @@ const Passageiro = () => {
 
   return (
     <>
+      <SEO
+        title="Passageiro PickApp — Peça táxi em Maputo com preço justo"
+        description="Viaje com a PickApp em Maputo, Matola e Zimpeto. Motoristas verificados, rastreamento em tempo real, botão de emergência e preço transparente — sem tarifas dinâmicas."
+        canonical="/passageiro"
+        keywords="táxi Maputo, app passageiro Moçambique, viagens seguras Maputo, preço fixo táxi, PickApp passageiro"
+        ogTitle="🚖 Peça o seu táxi com a PickApp — preço justo, sempre"
+        ogDescription="Motoristas próximos, viagens seguras e o preço que vê é o preço que paga. Baixe a PickApp e ande pela cidade com tranquilidade."
+      />
       <section className="relative pt-32 pb-16 overflow-hidden">
         <div className="absolute inset-0">
           <img src={passengerHeaderBg} alt="Passageiros PickApp" className="w-full h-full object-cover" loading="eager" />
