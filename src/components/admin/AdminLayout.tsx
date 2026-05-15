@@ -38,7 +38,7 @@ export function AdminLayout() {
           <header className="h-14 border-b flex items-center justify-between px-4 bg-card">
             <div className="flex items-center gap-2">
               <SidebarTrigger />
-              <img src={pickappLogo} alt="PickApp" className="h-8" />
+              <img src={pickappLogo} alt="Logótipo PickApp — Painel Administrativo" className="h-8" />
               <span className="font-semibold text-sm text-muted-foreground">Admin</span>
             </div>
             <div className="flex items-center gap-3">

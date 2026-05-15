@@ -1,0 +1,17 @@
+# PickApp Moçambique
+
+> PickApp é o aplicativo moçambicano de mobilidade urbana. Viagens seguras, rápidas e com preço justo em Maputo, Matola e Zimpeto, com motoristas verificados e tarifas transparentes (o preço que vê é o preço que paga).
+
+## Pages
+
+- [Início](/): Visão geral da PickApp, benefícios e como começar.
+- [Sobre](/sobre): Missão, visão e história da PickApp em Moçambique.
+- [Passageiro](/passageiro): Como pedir viagens, segurança e benefícios para passageiros.
+- [Motorista](/motorista): Como se tornar motorista parceiro, comissão de 5% e pré-registo.
+- [Contactos](/contactos): Email, telefone, WhatsApp e formulário de contacto.
+- [Blog](/blog): Novidades, dicas e histórias sobre mobilidade em Moçambique.
+
+## Optional
+
+- [Como se registar como motorista PickApp](/blog/como-registar-motorista-pickapp): Guia passo a passo para novos motoristas.
+- [Preço que vê é o preço que paga](/blog/preco-que-ve-e-preco-que-paga): Porque a PickApp é diferente das outras apps.

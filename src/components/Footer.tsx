@@ -30,7 +30,7 @@ export const Footer = () => (
         {/* Brand */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <img src={logo} alt="PickApp" className="h-16 w-auto rounded-lg bg-white p-2" />
+            <img src={logo} alt="Logótipo PickApp — Mobilidade em Moçambique" className="h-16 w-auto rounded-lg bg-white p-2" />
           </div>
           <p className="text-primary-foreground/60 text-sm leading-relaxed mb-6">
             Mobilidade inteligente em Moçambique. Viagens seguras, rápidas e com

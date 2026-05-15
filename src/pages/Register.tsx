@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -43,10 +44,16 @@ export default function Register() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-muted p-4">
+      <Helmet>
+        <title>Registar Utilizador | Painel PickApp</title>
+        <meta name="description" content="Criar uma nova conta de funcionário no painel administrativo PickApp." />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="canonical" href="https://pickapp-mobilidade.lovable.app/admin/register" />
+      </Helmet>
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <img src={pickappLogo} alt="PickApp" className="h-12 mx-auto mb-4" />
-          <CardTitle className="text-2xl">Registar Novo Utilizador</CardTitle>
+          <img src={pickappLogo} alt="Logótipo PickApp — Painel Administrativo" className="h-12 mx-auto mb-4" />
+          <h1 className="text-2xl font-bold text-foreground">Registar Novo Utilizador PickApp</h1>
           <CardDescription>Crie uma conta para um novo funcionário</CardDescription>
         </CardHeader>
         <CardContent>
