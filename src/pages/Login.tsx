@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -30,10 +31,16 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-muted p-4">
+      <Helmet>
+        <title>Login Administrativo | PickApp</title>
+        <meta name="description" content="Acesso restrito ao painel administrativo da PickApp." />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="canonical" href="https://pickapp-mobilidade.lovable.app/login" />
+      </Helmet>
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <img src={pickappLogo} alt="PickApp" className="h-12 mx-auto mb-4" />
-          <CardTitle className="text-2xl">Painel Administrativo</CardTitle>
+          <img src={pickappLogo} alt="Logótipo PickApp — Painel Administrativo" className="h-12 mx-auto mb-4" />
+          <h1 className="text-2xl font-bold text-foreground">Painel Administrativo PickApp</h1>
           <CardDescription>Introduza as suas credenciais para aceder</CardDescription>
         </CardHeader>
         <CardContent>
