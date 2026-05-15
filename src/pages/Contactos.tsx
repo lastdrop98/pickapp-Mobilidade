@@ -68,6 +68,27 @@ const Contactos = () => {
         title="Contactos PickApp — Suporte e Atendimento"
         description="Entre em contacto com a equipa PickApp. Email, telefone, WhatsApp e formulário de contacto. Suporte 24 horas em Moçambique."
         canonical="/contactos"
+        ogTitle="Fale com a PickApp — estamos aqui para ajudar"
+        ogDescription="Email, telefone e WhatsApp. Suporte humano da equipa PickApp em Maputo, todos os dias."
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "PickApp Moçambique",
+          url: "https://pickapp-mobilidade.lovable.app/contactos",
+          email: SUPPORT_EMAIL,
+          telephone: `+258 ${PHONE_NUMBER}`,
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Maputo",
+            addressCountry: "MZ",
+          },
+          areaServed: ["Maputo", "Matola", "Zimpeto"],
+          openingHours: "Mo-Su 00:00-23:59",
+          sameAs: [
+            "https://facebook.com/pickappmz",
+            "https://instagram.com/picapp.mz",
+          ],
+        }}
       />
       <PageBanner
         title="Contacte-nos"
