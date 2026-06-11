@@ -1,1 +1,4 @@
 project_id = "uvlhbcovguyiihbojcyz"
+
+[functions.optimize-blog-images]
+verify_jwt = false
