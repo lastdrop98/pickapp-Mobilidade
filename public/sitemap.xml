@@ -2,43 +2,165 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pickapp-mobilidade.lovable.app/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://pickapp-mobilidade.lovable.app/sobre</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pickapp-mobilidade.lovable.app/passageiro</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pickapp-mobilidade.lovable.app/motorista</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pickapp-mobilidade.lovable.app/contactos</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pickapp-mobilidade.lovable.app/blog</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pickapp-mobilidade.lovable.app/blog/preco-que-ve-e-o-preco-que-paga</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/vantagens-pickapp-viagem-com-criancas</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/cancelamento-pago-guia-motoristas-pickapp</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/porque-pickapp-escolha-certa-viagens-diarias</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/pickapp-app-100-porcento-mocambicana-crescimento</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/historias-reais-passageiros-motoristas-pickapp</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/dicas-para-passageiro-pickapp</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/vantagens-pickapp-ou-transportes-publicos</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/cancelamento-pago-pickapp-motoristas</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/sexta-feira-preparar-fim-de-semana-pickapp</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/pickapp-100-porcento-mocambicana-dinheiro-fica-no-pais</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/perguntas-frequentes-pickapp-faq</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/como-ser-motorista-bem-avaliado-pickapp</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/o-que-fazer-em-caso-de-problema-viagem-pickapp
+
+</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/dicas-para-economizar-nas-viagens-pickapp</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/como-pedir-pickapp-guia-rapido</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/5-vantagens-carteira-pickapp</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/crise-combustivel-pickapp-preco-justo</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/pickapp-vs-outras-apps-motorista-ganhos</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/botao-sos-motorista-verificado</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/como-registar-motorista-pickapp</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pickapp-mobilidade.lovable.app/blog/preco-que-ve-e-preco-que-paga</loc>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
