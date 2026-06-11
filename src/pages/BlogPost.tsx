@@ -130,7 +130,7 @@ const BlogPostPage = () => {
               <img
                 src={post.cover_image}
                 alt={post.title}
-                className="w-full rounded-2xl mb-10 aspect-video object-cover"
+                className="w-full h-auto rounded-2xl mb-10"
               />
             )}
 
