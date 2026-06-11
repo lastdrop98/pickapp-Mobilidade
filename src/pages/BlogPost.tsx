@@ -134,8 +134,16 @@ const BlogPostPage = () => {
               />
             )}
 
-            <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-headings:font-bold prose-p:text-muted-foreground prose-p:leading-relaxed prose-strong:text-foreground prose-a:text-accent prose-li:text-muted-foreground prose-hr:border-border">
-              <ReactMarkdown>{post.content}</ReactMarkdown>
+            <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-headings:font-bold prose-p:text-muted-foreground prose-p:leading-relaxed prose-strong:text-foreground prose-a:text-accent prose-li:text-muted-foreground prose-hr:border-border prose-img:w-full prose-img:h-auto prose-img:rounded-2xl">
+              <ReactMarkdown
+                components={{
+                  img: ({ node, ...props }) => (
+                    <img {...props} loading="lazy" className="w-full h-auto rounded-2xl" />
+                  ),
+                }}
+              >
+                {post.content}
+              </ReactMarkdown>
             </div>
           </div>
         </div>
