@@ -70,10 +70,13 @@ export const HeroSection = () => (
         <ScrollReveal direction="right" delay={0.2}>
           <div className="relative hidden lg:block">
             <img
-              src={heroImage}
+              src={heroImageSrc}
+              srcSet={heroImage}
+              sizes="(min-width: 1024px) 32rem, 100vw"
               alt="PickApp mobilidade urbana em Maputo"
               className="rounded-2xl shadow-2xl w-full max-w-lg mx-auto"
               loading="eager"
+              decoding="async"
             />
             <div className="absolute -bottom-6 -left-6 bg-card p-4 rounded-2xl shadow-xl border border-border">
               <div className="flex items-center gap-3">
