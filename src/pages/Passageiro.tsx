@@ -1,5 +1,8 @@
-import passengerHeaderBg from "@/assets/pickapp-passenger-header.jpg";
-import passengerBenefitsBg from "@/assets/passenger-benefits-bg.jpg";
+import { BgImage } from "@/components/BgImage";
+import passengerHeaderBgSet from "@/assets/pickapp-passenger-header.jpg?w=640;1024;1600;1920&format=webp&as=srcset";
+import passengerHeaderBgSrc from "@/assets/pickapp-passenger-header.jpg?w=1600&format=webp";
+import passengerBenefitsBgSet from "@/assets/passenger-benefits-bg.jpg?w=640;1024;1600;1920&format=webp&as=srcset";
+import passengerBenefitsBgSrc from "@/assets/passenger-benefits-bg.jpg?w=1600&format=webp";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
