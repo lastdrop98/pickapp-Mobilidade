@@ -3,13 +3,16 @@ import { Download, UserPlus } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { PLAYSTORE_USER_URL, APPSTORE_USER_URL } from "@/lib/constants";
-import heroImage from "@/assets/hero-mobility.jpg";
-import heroBg from "@/assets/hero-driver-bg.jpg";
+import { BgImage } from "@/components/BgImage";
+import heroImage from "@/assets/hero-mobility.jpg?w=512;768;1024&format=webp&as=srcset";
+import heroImageSrc from "@/assets/hero-mobility.jpg?w=1024&format=webp";
+import heroBgSet from "@/assets/hero-driver-bg.jpg?w=640;1024;1600;1920&format=webp&as=srcset";
+import heroBgSrc from "@/assets/hero-driver-bg.jpg?w=1600&format=webp";
 
 export const HeroSection = () => (
   <section className="relative min-h-screen flex items-center bg-primary overflow-hidden">
     <div className="absolute inset-0">
-      <img src={heroBg} alt="" className="w-full h-full object-cover" loading="eager" />
+      <BgImage srcSet={heroBgSet} src={heroBgSrc} eager />
     </div>
     <div className="absolute inset-0 bg-black/40" />
     <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-accent/8 rounded-full blur-[100px]" />
