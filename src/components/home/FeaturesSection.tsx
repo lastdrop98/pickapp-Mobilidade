@@ -113,7 +113,7 @@ export const FeaturesSection = () => (
 
     {/* Como funciona */}
     <section className="relative py-20 md:py-28 overflow-hidden">
-      <div className="absolute inset-0 bg-primary">
+      <div className="absolute inset-0">
         <BgImage srcSet={howItWorksBgSet} src={howItWorksBgSrc} />
       </div>
       <div className="container mx-auto px-4 relative z-10">
