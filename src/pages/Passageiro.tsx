@@ -183,12 +183,7 @@ const Passageiro = () => {
       {/* Visual Benefits with background image */}
       <section className="relative py-20 md:py-28 text-primary-foreground overflow-hidden min-h-[500px] flex items-center">
         <div className="absolute inset-0">
-          <img
-            src={passengerBenefitsBg}
-            alt=""
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
+          <BgImage srcSet={passengerBenefitsBgSet} src={passengerBenefitsBgSrc} />
         </div>
         <div className="absolute inset-0 bg-black/60" />
         <div className="container mx-auto px-4 relative z-10 w-full">
