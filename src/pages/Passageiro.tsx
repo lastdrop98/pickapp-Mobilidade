@@ -1,5 +1,8 @@
-import passengerHeaderBg from "@/assets/pickapp-passenger-header.jpg";
-import passengerBenefitsBg from "@/assets/passenger-benefits-bg.jpg";
+import { BgImage } from "@/components/BgImage";
+import passengerHeaderBgSet from "@/assets/pickapp-passenger-header.jpg?w=640;1024;1600;1920&format=webp&as=srcset";
+import passengerHeaderBgSrc from "@/assets/pickapp-passenger-header.jpg?w=1600&format=webp";
+import passengerBenefitsBgSet from "@/assets/passenger-benefits-bg.jpg?w=640;1024;1600;1920&format=webp&as=srcset";
+import passengerBenefitsBgSrc from "@/assets/passenger-benefits-bg.jpg?w=1600&format=webp";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
@@ -132,7 +135,7 @@ const Passageiro = () => {
       />
       <section className="relative pt-32 pb-16 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={passengerHeaderBg} alt="Passageiros PickApp" className="w-full h-full object-cover" loading="eager" />
+          <BgImage srcSet={passengerHeaderBgSet} src={passengerHeaderBgSrc} alt="Passageiros PickApp" eager />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <ScrollReveal>
@@ -180,12 +183,7 @@ const Passageiro = () => {
       {/* Visual Benefits with background image */}
       <section className="relative py-20 md:py-28 text-primary-foreground overflow-hidden min-h-[500px] flex items-center">
         <div className="absolute inset-0">
-          <img
-            src={passengerBenefitsBg}
-            alt=""
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
+          <BgImage srcSet={passengerBenefitsBgSet} src={passengerBenefitsBgSrc} />
         </div>
         <div className="absolute inset-0 bg-black/60" />
         <div className="container mx-auto px-4 relative z-10 w-full">

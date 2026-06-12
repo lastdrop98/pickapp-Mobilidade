@@ -10,7 +10,9 @@ import {
   Star,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import howItWorksBg from "@/assets/how-it-works-bg.jpg";
+import { BgImage } from "@/components/BgImage";
+import howItWorksBgSet from "@/assets/how-it-works-bg.jpg?w=640;1024;1600;1920&format=webp&as=srcset";
+import howItWorksBgSrc from "@/assets/how-it-works-bg.jpg?w=1600&format=webp";
 
 const whyFeatures = [
   {
@@ -112,12 +114,7 @@ export const FeaturesSection = () => (
     {/* Como funciona */}
     <section className="relative py-20 md:py-28 overflow-hidden">
       <div className="absolute inset-0">
-        <img
-          src={howItWorksBg}
-          alt=""
-          className="w-full h-full object-cover"
-          loading="lazy"
-        />
+        <BgImage srcSet={howItWorksBgSet} src={howItWorksBgSrc} />
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal>

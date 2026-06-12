@@ -29,8 +29,11 @@ import {
 import { WHATSAPP_URL, PLAYSTORE_DRIVER_URL, APPSTORE_DRIVER_URL } from "@/lib/constants";
 import { SEO } from "@/components/SEO";
 import { toast } from "sonner";
-import driverHeaderBg from "@/assets/pickapp-driver-header.jpg";
-import driverBenefitsBg from "@/assets/driver-benefits-bg.jpg";
+import { BgImage } from "@/components/BgImage";
+import driverHeaderBgSet from "@/assets/pickapp-driver-header.jpg?w=640;1024;1600;1920&format=webp&as=srcset";
+import driverHeaderBgSrc from "@/assets/pickapp-driver-header.jpg?w=1600&format=webp";
+import driverBenefitsBgSet from "@/assets/driver-benefits-bg.jpg?w=640;1024;1600;1920&format=webp&as=srcset";
+import driverBenefitsBgSrc from "@/assets/driver-benefits-bg.jpg?w=1600&format=webp";
 
 const benefits = [
   {
@@ -109,12 +112,7 @@ const Motorista = () => {
       {/* Hero Banner with Driver Image */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src={driverHeaderBg}
-            alt="Motorista PickApp"
-            className="w-full h-full object-cover"
-            loading="eager"
-          />
+          <BgImage srcSet={driverHeaderBgSet} src={driverHeaderBgSrc} alt="Motorista PickApp" eager />
         </div>
         <div className="absolute top-10 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
         <div className="container mx-auto px-4 relative z-10 text-center">
@@ -224,12 +222,7 @@ const Motorista = () => {
       {/* Visual Benefits with background image */}
       <section className="relative py-20 md:py-28 text-primary-foreground overflow-hidden min-h-[500px] flex items-center">
         <div className="absolute inset-0">
-          <img
-            src={driverBenefitsBg}
-            alt=""
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
+          <BgImage srcSet={driverBenefitsBgSet} src={driverBenefitsBgSrc} />
         </div>
         <div className="absolute inset-0 bg-black/60" />
         <div className="container mx-auto px-4 relative z-10 w-full">
