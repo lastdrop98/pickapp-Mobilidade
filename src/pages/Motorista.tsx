@@ -112,12 +112,7 @@ const Motorista = () => {
       {/* Hero Banner with Driver Image */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src={driverHeaderBg}
-            alt="Motorista PickApp"
-            className="w-full h-full object-cover"
-            loading="eager"
-          />
+          <BgImage srcSet={driverHeaderBgSet} src={driverHeaderBgSrc} alt="Motorista PickApp" eager />
         </div>
         <div className="absolute top-10 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
         <div className="container mx-auto px-4 relative z-10 text-center">
