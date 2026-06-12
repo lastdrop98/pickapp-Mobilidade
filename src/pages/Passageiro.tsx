@@ -135,7 +135,7 @@ const Passageiro = () => {
       />
       <section className="relative pt-32 pb-16 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={passengerHeaderBg} alt="Passageiros PickApp" className="w-full h-full object-cover" loading="eager" />
+          <BgImage srcSet={passengerHeaderBgSet} src={passengerHeaderBgSrc} alt="Passageiros PickApp" eager />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <ScrollReveal>
