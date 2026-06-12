@@ -134,7 +134,7 @@ const Passageiro = () => {
         ogDescription="Motoristas próximos, viagens seguras e o preço que vê é o preço que paga. Baixe a PickApp e ande pela cidade com tranquilidade."
       />
       <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-primary">
           <BgImage srcSet={passengerHeaderBgSet} src={passengerHeaderBgSrc} alt="Passageiros PickApp" eager />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
@@ -182,7 +182,7 @@ const Passageiro = () => {
 
       {/* Visual Benefits with background image */}
       <section className="relative py-20 md:py-28 text-primary-foreground overflow-hidden min-h-[500px] flex items-center">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-primary">
           <BgImage srcSet={passengerBenefitsBgSet} src={passengerBenefitsBgSrc} />
         </div>
         <div className="absolute inset-0 bg-black/60" />

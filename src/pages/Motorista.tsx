@@ -111,7 +111,7 @@ const Motorista = () => {
       />
       {/* Hero Banner with Driver Image */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-primary">
           <BgImage srcSet={driverHeaderBgSet} src={driverHeaderBgSrc} alt="Motorista PickApp" eager />
         </div>
         <div className="absolute top-10 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
@@ -221,7 +221,7 @@ const Motorista = () => {
 
       {/* Visual Benefits with background image */}
       <section className="relative py-20 md:py-28 text-primary-foreground overflow-hidden min-h-[500px] flex items-center">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-primary">
           <BgImage srcSet={driverBenefitsBgSet} src={driverBenefitsBgSrc} />
         </div>
         <div className="absolute inset-0 bg-black/60" />
