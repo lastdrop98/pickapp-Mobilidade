@@ -30,10 +30,10 @@ import { WHATSAPP_URL, PLAYSTORE_DRIVER_URL, APPSTORE_DRIVER_URL } from "@/lib/c
 import { SEO } from "@/components/SEO";
 import { toast } from "sonner";
 import { BgImage } from "@/components/BgImage";
-import driverHeaderBgSet from "@/assets/pickapp-driver-header.jpg?w=640;1024;1600;1920&format=webp&as=srcset";
-import driverHeaderBgSrc from "@/assets/pickapp-driver-header.jpg?w=1600&format=webp";
-import driverBenefitsBgSet from "@/assets/driver-benefits-bg.jpg?w=640;1024;1600;1920&format=webp&as=srcset";
-import driverBenefitsBgSrc from "@/assets/driver-benefits-bg.jpg?w=1600&format=webp";
+import driverHeaderBgSet from "@/assets/pickapp-driver-header.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
+import driverHeaderBgSrc from "@/assets/pickapp-driver-header.jpg?w=1600&format=webp&quality=90";
+import driverBenefitsBgSet from "@/assets/driver-benefits-bg.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
+import driverBenefitsBgSrc from "@/assets/driver-benefits-bg.jpg?w=1600&format=webp&quality=90";
 
 const benefits = [
   {
