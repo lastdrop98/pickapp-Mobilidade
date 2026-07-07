@@ -11,8 +11,8 @@ import {
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { BgImage } from "@/components/BgImage";
-import howItWorksBgSet from "@/assets/how-it-works-bg.jpg?w=640;1024;1600;1920&format=webp&as=srcset";
-import howItWorksBgSrc from "@/assets/how-it-works-bg.jpg?w=1600&format=webp";
+import howItWorksBgSet from "@/assets/how-it-works-bg.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
+import howItWorksBgSrc from "@/assets/how-it-works-bg.jpg?w=1600&format=webp&quality=90";
 
 const whyFeatures = [
   {
