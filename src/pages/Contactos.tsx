@@ -9,6 +9,8 @@ import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from "lucide-react";
 import { SUPPORT_EMAIL, PHONE_NUMBER, WHATSAPP_URL, WHATSAPP_DISPLAY } from "@/lib/constants";
 import { toast } from "sonner";
+import contactosBgSet from "@/assets/contactos-bg.jpg?w=640;1024;1600;1920&format=webp&as=srcset";
+import contactosBgSrc from "@/assets/contactos-bg.jpg?w=1600&format=webp";
 
 const contactInfo = [
   {
@@ -93,6 +95,9 @@ const Contactos = () => {
       <PageBanner
         title="Contacte-nos"
         subtitle="Estamos aqui para ajudar. Entre em contacto connosco."
+        bgSrcSet={contactosBgSet}
+        bgSrc={contactosBgSrc}
+        bgAlt="Equipa de apoio ao cliente da PickApp em Moçambique"
       />
 
       <section className="py-20 bg-background">

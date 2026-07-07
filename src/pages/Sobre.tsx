@@ -2,6 +2,8 @@ import { PageBanner } from "@/components/PageBanner";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SEO } from "@/components/SEO";
 import { Target, Eye, Heart } from "lucide-react";
+import sobreBgSet from "@/assets/sobre-bg.jpg?w=640;1024;1600;1920&format=webp&as=srcset";
+import sobreBgSrc from "@/assets/sobre-bg.jpg?w=1600&format=webp";
 
 const values = [
   {
@@ -34,6 +36,9 @@ const Sobre = () => (
     <PageBanner
       title="Sobre a PickApp"
       subtitle="Conheça a nossa história e a equipa por trás da mobilidade inteligente."
+      bgSrcSet={sobreBgSet}
+      bgSrc={sobreBgSrc}
+      bgAlt="Vista aérea da cidade de Maputo, Moçambique"
     />
 
     {/* Story */}
