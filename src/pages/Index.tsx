@@ -3,9 +3,12 @@ import { Users, Car, ArrowRight } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/home/HeroSection";
 import { FeaturesSection } from "@/components/home/FeaturesSection";
+import { StatsSection } from "@/components/home/StatsSection";
+import { ConvenienceSection } from "@/components/home/ConvenienceSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { FAQSection } from "@/components/home/FAQSection";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { TiltCard } from "@/components/TiltCard";
 
 const RoleSelectorSection = () => (
   <section className="py-20 md:py-28 bg-background">

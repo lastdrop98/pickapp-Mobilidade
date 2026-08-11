@@ -17,6 +17,7 @@ import { AdminLayout } from "@/components/admin/AdminLayout";
 import Index from "./pages/Index";
 import Motorista from "./pages/Motorista";
 import Passageiro from "./pages/Passageiro";
+import Conveniencia from "./pages/Conveniencia";
 import Sobre from "./pages/Sobre";
 import Contactos from "./pages/Contactos";
 import Blog from "./pages/Blog";
@@ -65,6 +66,8 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/motorista" element={<Motorista />} />
               <Route path="/passageiro" element={<Passageiro />} />
+              <Route path="/conveniencia" element={<Conveniencia />} />
+
               <Route path="/sobre" element={<Sobre />} />
               <Route path="/contactos" element={<Contactos />} />
               <Route path="/blog" element={<Blog />} />
