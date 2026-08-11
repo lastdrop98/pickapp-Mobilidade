@@ -62,7 +62,11 @@ const steps = [
   },
 ];
 
-export const ConvenienceSection = () => (
+export const ConvenienceSection = ({
+  showHeading = true,
+}: {
+  showHeading?: boolean;
+}) => (
   <section
     id="conveniencia"
     className="relative overflow-hidden py-20 md:py-28 bg-gradient-to-b from-background via-secondary/40 to-background scroll-mt-24"
@@ -70,20 +74,22 @@ export const ConvenienceSection = () => (
     <FloatingBlobs />
 
     <div className="container relative z-10 mx-auto px-4">
-      <ScrollReveal>
-        <div className="mb-14 text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider text-accent">
-            Novo na PickApp
-          </span>
-          <h2 className="mt-2 text-3xl font-extrabold text-foreground md:text-4xl">
-            Serviços de Conveniência
-          </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-            Muito mais do que viagens. Agora a PickApp leva-lhe também comida,
-            compras, bebidas e medicamentos até à porta de casa.
-          </p>
-        </div>
-      </ScrollReveal>
+      {showHeading && (
+        <ScrollReveal>
+          <div className="mb-14 text-center">
+            <span className="text-sm font-semibold uppercase tracking-wider text-accent">
+              Novo na PickApp
+            </span>
+            <h2 className="mt-2 text-3xl font-extrabold text-foreground md:text-4xl">
+              Serviços de Conveniência
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
+              Muito mais do que viagens. Agora a PickApp leva-lhe também comida,
+              compras, bebidas e medicamentos até à porta de casa.
+            </p>
+          </div>
+        </ScrollReveal>
+      )}
 
       {/* Como funciona */}
       <div className="mb-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
