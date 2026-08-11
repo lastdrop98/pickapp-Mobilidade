@@ -29,48 +29,53 @@ const RoleSelectorSection = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         <ScrollReveal>
-          <Link
-            to="/passageiro"
-            className="group block bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/50 hover:border-accent hover:shadow-lg transition-all h-full"
-          >
-            <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
-              <Users className="w-7 h-7 text-accent" />
-            </div>
-            <h3 className="text-2xl font-extrabold text-foreground mb-2">
-              Sou Passageiro
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Viaje com segurança, conforto e preços justos em todo Moçambique.
-            </p>
-            <span className="inline-flex items-center gap-2 text-accent font-semibold">
-              Ver mais
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </span>
-          </Link>
+          <TiltCard className="h-full">
+            <Link
+              to="/passageiro"
+              className="group block bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/50 hover:border-accent hover:shadow-xl transition-all h-full"
+            >
+              <div className="w-14 h-14 bg-gradient-brand rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6 motion-reduce:transform-none">
+                <Users className="w-7 h-7 text-primary-foreground" />
+              </div>
+              <h3 className="text-2xl font-extrabold text-foreground mb-2">
+                Sou Passageiro
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Viaje com segurança, conforto e preços justos em todo Moçambique.
+              </p>
+              <span className="inline-flex items-center gap-2 text-accent font-semibold">
+                Ver mais
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+          </TiltCard>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <Link
-            to="/motorista"
-            className="group block bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/50 hover:border-accent hover:shadow-lg transition-all h-full"
-          >
-            <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
-              <Car className="w-7 h-7 text-accent" />
-            </div>
-            <h3 className="text-2xl font-extrabold text-foreground mb-2">
-              Sou Motorista
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Ganhe dinheiro com flexibilidade e cresça com a maior comunidade
-              de motoristas.
-            </p>
-            <span className="inline-flex items-center gap-2 text-accent font-semibold">
-              Ver mais
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </span>
-          </Link>
+          <TiltCard className="h-full">
+            <Link
+              to="/motorista"
+              className="group block bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/50 hover:border-accent hover:shadow-xl transition-all h-full"
+            >
+              <div className="w-14 h-14 bg-gradient-green rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6 motion-reduce:transform-none">
+                <Car className="w-7 h-7 text-primary-foreground" />
+              </div>
+              <h3 className="text-2xl font-extrabold text-foreground mb-2">
+                Sou Motorista
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Ganhe dinheiro com flexibilidade e cresça com a maior comunidade
+                de motoristas.
+              </p>
+              <span className="inline-flex items-center gap-2 text-accent font-semibold">
+                Ver mais
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+          </TiltCard>
         </ScrollReveal>
       </div>
+
     </div>
   </section>
 );
