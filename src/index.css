@@ -36,6 +36,11 @@
 
     --radius: 0.75rem;
 
+    /* Brand gradients */
+    --gradient-brand: linear-gradient(135deg, #0d4c8c 0%, #3fa0e8 100%);
+    --gradient-green: linear-gradient(135deg, #558b2f 0%, #8bc34a 100%);
+    --gradient-brand-mix: linear-gradient(135deg, #0d4c8c 0%, #3fa0e8 55%, #8bc34a 100%);
+
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -94,13 +99,46 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Accessibility: honour the user's motion preference everywhere */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(135deg, hsl(210 78% 42%), hsl(125 45% 43%));
+    background: var(--gradient-brand);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .bg-gradient-brand {
+    background-image: var(--gradient-brand);
+  }
+
+  .bg-gradient-green {
+    background-image: var(--gradient-green);
+  }
+
+  /* Subtle press feedback for interactive elements */
+  .press {
+    @apply transition-transform duration-150 active:scale-95 motion-reduce:transform-none;
   }
 }
