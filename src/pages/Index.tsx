@@ -106,7 +106,9 @@ const Index = () => (
     />
     <HeroSection />
     <FeaturesSection />
+    <StatsSection />
     <RoleSelectorSection />
+    <ConvenienceSection />
     <TestimonialsSection />
     <FAQSection />
   </>
