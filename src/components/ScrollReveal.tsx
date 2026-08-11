@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useRef, type ReactNode } from "react";
 
 interface ScrollRevealProps {
@@ -16,14 +16,19 @@ export const ScrollReveal = ({
 }: ScrollRevealProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
+  const shouldReduceMotion = useReducedMotion();
 
   const variants: Record<string, Record<string, number>> = {
-    up: { y: 40 },
-    down: { y: -40 },
-    left: { x: -40 },
-    right: { x: 40 },
+    up: { y: 28 },
+    down: { y: -28 },
+    left: { x: -28 },
+    right: { x: 28 },
     none: {},
   };
+
+  if (shouldReduceMotion) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
     <motion.div
