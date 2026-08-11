@@ -16,7 +16,7 @@ const Conveniencia = () => (
       title="Serviços de Conveniência"
       subtitle="Comida, compras, bebidas e farmácia entregues onde estiver."
     />
-    <ConvenienceSection />
+    <ConvenienceSection showHeading={false} />
   </>
 );
 
