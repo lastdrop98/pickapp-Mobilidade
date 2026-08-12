@@ -42,8 +42,8 @@ export const TestimonialsSection = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {testimonials.map((testimonial, index) => (
           <ScrollReveal key={testimonial.name} delay={index * 0.1}>
-            <div className="bg-card rounded-2xl p-8 shadow-sm border border-border/50 h-full flex flex-col">
-              <div className="w-14 h-14 bg-accent/20 rounded-full flex items-center justify-center mb-5">
+            <div className="card-interactive group bg-card rounded-2xl p-8 shadow-sm border border-border/50 hover:border-accent/40 h-full flex flex-col">
+              <div className="w-14 h-14 bg-accent/20 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 ease-out group-hover:scale-105 motion-reduce:transform-none">
                 <span className="text-accent font-extrabold text-lg">
                   {testimonial.initials}
                 </span>
@@ -60,7 +60,7 @@ export const TestimonialsSection = () => (
                 ))}
               </div>
               <div>
-                <p className="font-bold text-foreground">{testimonial.name}</p>
+                <p className="font-bold text-foreground transition-colors duration-300 group-hover:text-accent">{testimonial.name}</p>
                 <p className="text-sm text-muted-foreground">
                   {testimonial.role}
                 </p>
