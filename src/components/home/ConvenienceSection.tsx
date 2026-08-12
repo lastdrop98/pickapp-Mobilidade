@@ -126,7 +126,7 @@ export const ConvenienceSection = ({
                 <p className="mb-5 flex-1 text-sm text-muted-foreground">
                   {cat.text}
                 </p>
-                <span className="inline-flex translate-y-1 items-center gap-2 self-start rounded-full bg-accent/10 px-3 py-1.5 text-xs font-medium text-accent opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100 group-active:translate-y-0 group-active:opacity-100 motion-reduce:translate-y-0 motion-reduce:opacity-100 md:opacity-0 max-md:translate-y-0 max-md:opacity-100">
+                <span className="inline-flex items-center gap-2 self-start rounded-full bg-accent/10 px-3 py-1.5 text-xs font-medium text-accent transition-all duration-300 ease-out md:translate-y-1 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-focus-within:translate-y-0 md:group-focus-within:opacity-100 motion-reduce:translate-y-0 motion-reduce:opacity-100">
                   <BadgeCheck className="h-3.5 w-3.5" />
                   Entrega feita pela nossa rede de estafetas
                 </span>
