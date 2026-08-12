@@ -1,21 +1,49 @@
 import { ScrollReveal } from "./ScrollReveal";
+import { BgImage } from "./BgImage";
 
 interface PageBannerProps {
   title: string;
   subtitle?: string;
+  /** Responsive srcset for the banner background image */
+  imageSrcSet?: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
-export const PageBanner = ({ title, subtitle }: PageBannerProps) => (
-  <section className="bg-primary pt-32 pb-16 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-accent/10" />
-    <div className="absolute top-10 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
-    <div className="container mx-auto px-4 relative z-10 text-center">
+export const PageBanner = ({
+  title,
+  subtitle,
+  imageSrcSet,
+  imageSrc,
+  imageAlt = "",
+}: PageBannerProps) => (
+  <section className="relative overflow-hidden bg-primary pt-32 pb-16 md:pt-40 md:pb-24">
+    {imageSrcSet && imageSrc ? (
+      <>
+        <div className="absolute inset-0">
+          <BgImage
+            srcSet={imageSrcSet}
+            src={imageSrc}
+            alt={imageAlt}
+            eager
+            className="object-center"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/70 to-primary/40" />
+      </>
+    ) : (
+      <>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-accent/10" />
+        <div className="absolute top-10 right-10 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
+      </>
+    )}
+    <div className="container relative z-10 mx-auto px-4 text-center">
       <ScrollReveal>
-        <h1 className="text-3xl md:text-5xl font-extrabold text-primary-foreground mb-4">
+        <h1 className="mb-4 text-3xl font-extrabold text-primary-foreground drop-shadow-md md:text-5xl">
           {title}
         </h1>
         {subtitle && (
-          <p className="text-lg md:text-xl text-primary-foreground/70 max-w-2xl mx-auto">
+          <p className="mx-auto max-w-2xl text-lg text-primary-foreground/85 drop-shadow md:text-xl">
             {subtitle}
           </p>
         )}
