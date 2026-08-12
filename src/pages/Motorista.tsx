@@ -30,8 +30,6 @@ import { WHATSAPP_URL, PLAYSTORE_DRIVER_URL, APPSTORE_DRIVER_URL } from "@/lib/c
 import { SEO } from "@/components/SEO";
 import { toast } from "sonner";
 import { BgImage } from "@/components/BgImage";
-import driverHeaderBgSet from "@/assets/pickapp-driver-header.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
-import driverHeaderBgSrc from "@/assets/pickapp-driver-header.jpg?w=1600&format=webp&quality=90";
 import driverBenefitsBgSet from "@/assets/driver-benefits-bg.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
 import driverBenefitsBgSrc from "@/assets/driver-benefits-bg.jpg?w=1600&format=webp&quality=90";
 import bannerSet from "@/assets/page-motorista.jpg?w=640;1024;1600;1920&format=webp&quality=85&as=srcset";
@@ -114,7 +112,7 @@ const Motorista = () => {
       {/* Hero Banner with Driver Image */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
-          <BgImage srcSet={driverHeaderBgSet} src={driverHeaderBgSrc} alt="Motorista PickApp" eager />
+          <BgImage srcSet={bannerSet} src={bannerSrc} alt="Motorista PickApp a aceitar uma viagem no telemóvel em Maputo" eager />
         </div>
         <div className="absolute top-10 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
         <div className="container mx-auto px-4 relative z-10 text-center">

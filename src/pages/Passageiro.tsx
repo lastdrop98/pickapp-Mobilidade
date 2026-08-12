@@ -1,6 +1,4 @@
 import { BgImage } from "@/components/BgImage";
-import passengerHeaderBgSet from "@/assets/pickapp-passenger-header.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
-import passengerHeaderBgSrc from "@/assets/pickapp-passenger-header.jpg?w=1600&format=webp&quality=90";
 import passengerBenefitsBgSet from "@/assets/passenger-benefits-bg.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
 import passengerBenefitsBgSrc from "@/assets/passenger-benefits-bg.jpg?w=1600&format=webp&quality=90";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -137,7 +135,7 @@ const Passageiro = () => {
       />
       <section className="relative pt-32 pb-16 overflow-hidden">
         <div className="absolute inset-0">
-          <BgImage srcSet={passengerHeaderBgSet} src={passengerHeaderBgSrc} alt="Passageiros PickApp" eager />
+          <BgImage srcSet={bannerSet} src={bannerSrc} alt="Passageiro à espera da viagem PickApp numa rua de Maputo" eager />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <ScrollReveal>
