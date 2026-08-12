@@ -24,6 +24,8 @@ import categoriesImage from "@/assets/pickapp-categories-new.jpeg";
 import passengerPromo from "@/assets/pickapp-passenger-promo.jpg";
 import passengerDiscount from "@/assets/pickapp-passenger-discount.jpeg";
 import { useState, useEffect } from "react";
+import bannerSet from "@/assets/page-passageiro.jpg?w=640;1024;1600;1920&format=webp&quality=85&as=srcset";
+import bannerSrc from "@/assets/page-passageiro.jpg?w=1600&format=webp&quality=85";
 
 const howToSteps = [
   {
@@ -215,7 +217,7 @@ const Passageiro = () => {
         </div>
       </section>
       {/* Carousel */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
@@ -299,7 +301,7 @@ const Passageiro = () => {
       </section>
 
       {/* Safety Tips */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <ScrollReveal>

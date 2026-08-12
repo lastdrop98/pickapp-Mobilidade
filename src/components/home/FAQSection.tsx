@@ -47,7 +47,7 @@ export const FAQSection = () => {
   };
 
   return (
-  <section className="py-20 md:py-28 bg-muted/30">
+  <section className="py-20 md:py-28">
     <Helmet>
       <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
     </Helmet>

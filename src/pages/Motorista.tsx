@@ -34,6 +34,8 @@ import driverHeaderBgSet from "@/assets/pickapp-driver-header.jpg?w=640;1024;160
 import driverHeaderBgSrc from "@/assets/pickapp-driver-header.jpg?w=1600&format=webp&quality=90";
 import driverBenefitsBgSet from "@/assets/driver-benefits-bg.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
 import driverBenefitsBgSrc from "@/assets/driver-benefits-bg.jpg?w=1600&format=webp&quality=90";
+import bannerSet from "@/assets/page-motorista.jpg?w=640;1024;1600;1920&format=webp&quality=85&as=srcset";
+import bannerSrc from "@/assets/page-motorista.jpg?w=1600&format=webp&quality=85";
 
 const benefits = [
   {
@@ -255,7 +257,7 @@ const Motorista = () => {
       </section>
 
       {/* Requirements */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">

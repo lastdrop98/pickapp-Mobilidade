@@ -1,6 +1,8 @@
 import { SEO } from "@/components/SEO";
 import { PageBanner } from "@/components/PageBanner";
 import { ConvenienceSection } from "@/components/home/ConvenienceSection";
+import bannerSet from "@/assets/page-conveniencia.jpg?w=640;1024;1600;1920&format=webp&quality=85&as=srcset";
+import bannerSrc from "@/assets/page-conveniencia.jpg?w=1600&format=webp&quality=85";
 
 const Conveniencia = () => (
   <>
@@ -13,6 +15,9 @@ const Conveniencia = () => (
       ogDescription="Restaurantes, supermercados, bottle stores e farmácias com entrega rápida em Maputo."
     />
     <PageBanner
+      imageSrcSet={bannerSet}
+      imageSrc={bannerSrc}
+      imageAlt="Estafeta PickApp a entregar uma encomenda à porta de casa em Maputo"
       title="Serviços de Conveniência"
       subtitle="Comida, compras, bebidas e farmácia entregues onde estiver."
     />
