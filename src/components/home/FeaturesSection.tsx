@@ -78,7 +78,7 @@ const steps = [
 export const FeaturesSection = () => (
   <>
     {/* Por que escolher */}
-    <section className="py-20 md:py-28 bg-background">
+    <section className="py-20 md:py-28">
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-16">
@@ -94,11 +94,11 @@ export const FeaturesSection = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {whyFeatures.map((feature, index) => (
             <ScrollReveal key={feature.title} delay={index * 0.1}>
-              <div className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 hover:shadow-md hover:border-accent/30 transition-all duration-300 h-full">
-                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+              <div className="card-interactive group bg-card rounded-2xl p-6 shadow-sm border border-border/50 hover:border-accent/40 h-full">
+                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4 overflow-hidden transition-transform duration-300 ease-out group-hover:scale-105 motion-reduce:transform-none">
                   <feature.icon className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="font-bold text-foreground mb-2">
+                <h3 className="font-bold text-foreground mb-2 transition-colors duration-300 group-hover:text-accent">
                   {feature.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -131,7 +131,7 @@ export const FeaturesSection = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {steps.map((step, index) => (
             <ScrollReveal key={step.number} delay={index * 0.1}>
-              <div className="text-center bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border/50 shadow-sm h-full">
+              <div className="card-interactive text-center bg-card rounded-2xl p-6 border border-border/50 shadow-sm h-full">
                 <div className="w-16 h-16 bg-accent text-accent-foreground rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl font-extrabold shadow-lg">
                   {step.number}
                 </div>

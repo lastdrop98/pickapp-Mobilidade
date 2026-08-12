@@ -2,6 +2,8 @@ import { PageBanner } from "@/components/PageBanner";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SEO } from "@/components/SEO";
 import { Target, Eye, Heart } from "lucide-react";
+import bannerSet from "@/assets/page-sobre.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
+import bannerSrc from "@/assets/page-sobre.jpg?w=1600&format=webp&quality=90";
 
 const values = [
   {
@@ -32,12 +34,15 @@ const Sobre = () => (
       canonical="/sobre"
     />
     <PageBanner
+      imageSrcSet={bannerSet}
+      imageSrc={bannerSrc}
+      imageAlt="Equipa PickApp a trabalhar num escritório em Maputo"
       title="Sobre a PickApp"
       subtitle="Conheça a nossa história e a equipa por trás da mobilidade inteligente."
     />
 
     {/* Story */}
-    <section className="py-20 bg-background">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
@@ -70,7 +75,7 @@ const Sobre = () => (
     </section>
 
     {/* Mission, Vision, Values */}
-    <section className="py-20 bg-muted/50">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-12">

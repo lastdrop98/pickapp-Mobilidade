@@ -30,10 +30,10 @@ import { WHATSAPP_URL, PLAYSTORE_DRIVER_URL, APPSTORE_DRIVER_URL } from "@/lib/c
 import { SEO } from "@/components/SEO";
 import { toast } from "sonner";
 import { BgImage } from "@/components/BgImage";
-import driverHeaderBgSet from "@/assets/pickapp-driver-header.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
-import driverHeaderBgSrc from "@/assets/pickapp-driver-header.jpg?w=1600&format=webp&quality=90";
 import driverBenefitsBgSet from "@/assets/driver-benefits-bg.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
 import driverBenefitsBgSrc from "@/assets/driver-benefits-bg.jpg?w=1600&format=webp&quality=90";
+import bannerSet from "@/assets/page-motorista.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
+import bannerSrc from "@/assets/page-motorista.jpg?w=1600&format=webp&quality=90";
 
 const benefits = [
   {
@@ -112,7 +112,7 @@ const Motorista = () => {
       {/* Hero Banner with Driver Image */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
-          <BgImage srcSet={driverHeaderBgSet} src={driverHeaderBgSrc} alt="Motorista PickApp" eager />
+          <BgImage srcSet={bannerSet} src={bannerSrc} alt="Motorista PickApp a aceitar uma viagem no telemóvel em Maputo" eager />
         </div>
         <div className="absolute top-10 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
         <div className="container mx-auto px-4 relative z-10 text-center">
@@ -151,7 +151,7 @@ const Motorista = () => {
       </section>
 
       {/* How to start */}
-      <section className="py-20 bg-background">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
@@ -255,7 +255,7 @@ const Motorista = () => {
       </section>
 
       {/* Requirements */}
-      <section className="py-20 bg-muted/50">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
@@ -283,7 +283,7 @@ const Motorista = () => {
       </section>
 
       {/* Form */}
-      <section className="py-20 bg-background">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-xl mx-auto">
             <ScrollReveal>

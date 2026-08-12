@@ -20,7 +20,6 @@ export const CountUp = ({
 }: CountUpProps) => {
   const ref = useRef<HTMLSpanElement>(null);
   const [value, setValue] = useState(0);
-  const started = useRef(false);
 
   useEffect(() => {
     const node = ref.current;
@@ -34,25 +33,41 @@ export const CountUp = ({
       return;
     }
 
+    let started = false;
+    let raf = 0;
+
+    const run = () => {
+      if (started) return;
+      started = true;
+      const start = performance.now();
+      const tick = (now: number) => {
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+        setValue(Math.round(eased * end));
+        if (p < 1) raf = requestAnimationFrame(tick);
+      };
+      raf = requestAnimationFrame(tick);
+    };
+
+    // Already visible on mount (e.g. above the fold or after hydration)?
+    const rect = node.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) run();
+
     const observer = new IntersectionObserver(
       (entries) => {
-        if (!entries[0].isIntersecting || started.current) return;
-        started.current = true;
-        const start = performance.now();
-        const tick = (now: number) => {
-          const p = Math.min((now - start) / duration, 1);
-          // easeOutCubic
-          const eased = 1 - Math.pow(1 - p, 3);
-          setValue(Math.round(eased * end));
-          if (p < 1) requestAnimationFrame(tick);
-        };
-        requestAnimationFrame(tick);
+        if (entries.some((e) => e.isIntersecting)) {
+          run();
+          observer.disconnect();
+        }
       },
-      { threshold: 0.3 },
+      { threshold: 0.1 },
     );
-
     observer.observe(node);
-    return () => observer.disconnect();
+
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(raf);
+    };
   }, [end, duration]);
 
   const formatted = value

@@ -1,6 +1,4 @@
 import { BgImage } from "@/components/BgImage";
-import passengerHeaderBgSet from "@/assets/pickapp-passenger-header.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
-import passengerHeaderBgSrc from "@/assets/pickapp-passenger-header.jpg?w=1600&format=webp&quality=90";
 import passengerBenefitsBgSet from "@/assets/passenger-benefits-bg.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
 import passengerBenefitsBgSrc from "@/assets/passenger-benefits-bg.jpg?w=1600&format=webp&quality=90";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -24,6 +22,8 @@ import categoriesImage from "@/assets/pickapp-categories-new.jpeg";
 import passengerPromo from "@/assets/pickapp-passenger-promo.jpg";
 import passengerDiscount from "@/assets/pickapp-passenger-discount.jpeg";
 import { useState, useEffect } from "react";
+import bannerSet from "@/assets/page-passageiro.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
+import bannerSrc from "@/assets/page-passageiro.jpg?w=1600&format=webp&quality=90";
 
 const howToSteps = [
   {
@@ -135,7 +135,7 @@ const Passageiro = () => {
       />
       <section className="relative pt-32 pb-16 overflow-hidden">
         <div className="absolute inset-0">
-          <BgImage srcSet={passengerHeaderBgSet} src={passengerHeaderBgSrc} alt="Passageiros PickApp" eager />
+          <BgImage srcSet={bannerSet} src={bannerSrc} alt="Passageiro à espera da viagem PickApp numa rua de Maputo" eager />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <ScrollReveal>
@@ -150,7 +150,7 @@ const Passageiro = () => {
       </section>
 
       {/* How to use */}
-      <section className="py-20 bg-background">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
@@ -215,7 +215,7 @@ const Passageiro = () => {
         </div>
       </section>
       {/* Carousel */}
-      <section className="py-20 bg-muted/50">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
@@ -263,7 +263,7 @@ const Passageiro = () => {
       </section>
 
       {/* Benefits */}
-      <section className="py-20 bg-background">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
@@ -299,7 +299,7 @@ const Passageiro = () => {
       </section>
 
       {/* Safety Tips */}
-      <section className="py-20 bg-muted/50">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <ScrollReveal>

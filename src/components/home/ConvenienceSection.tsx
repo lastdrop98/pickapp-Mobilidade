@@ -69,7 +69,7 @@ export const ConvenienceSection = ({
 }) => (
   <section
     id="conveniencia"
-    className="relative overflow-hidden py-20 md:py-28 bg-gradient-to-b from-background via-secondary/40 to-background scroll-mt-24"
+    className="relative overflow-hidden py-20 md:py-28 scroll-mt-24"
   >
     <FloatingBlobs />
 
@@ -95,7 +95,7 @@ export const ConvenienceSection = ({
       <div className="mb-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map((step, i) => (
           <ScrollReveal key={step.title} delay={i * 0.1}>
-            <div className="group relative h-full rounded-2xl border border-border/50 bg-card/70 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div className="card-interactive group relative h-full rounded-2xl border border-border/50 bg-card p-6 shadow-sm hover:border-accent/40">
               <span className="absolute right-5 top-4 text-4xl font-extrabold text-accent/10">
                 {i + 1}
               </span>
@@ -114,17 +114,19 @@ export const ConvenienceSection = ({
         {categories.map((cat, i) => (
           <ScrollReveal key={cat.title} delay={i * 0.1}>
             <TiltCard className="h-full">
-              <div className="group flex h-full flex-col rounded-2xl border border-border/50 bg-card p-7 shadow-sm transition-shadow duration-300 hover:shadow-xl">
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-brand transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110 motion-reduce:transform-none">
-                  <cat.icon className="h-7 w-7 text-primary-foreground" />
+              <div className="card-interactive group flex h-full flex-col rounded-2xl border border-border/50 bg-card p-7 shadow-sm hover:border-accent/40">
+                <div className="mb-5 overflow-hidden rounded-2xl">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-brand transition-transform duration-300 ease-out group-hover:scale-105 motion-reduce:transform-none">
+                    <cat.icon className="h-7 w-7 text-primary-foreground" />
+                  </div>
                 </div>
-                <h3 className="mb-2 text-xl font-extrabold text-foreground">
+                <h3 className="mb-2 text-xl font-extrabold text-foreground transition-colors duration-300 group-hover:text-accent">
                   {cat.title}
                 </h3>
                 <p className="mb-5 flex-1 text-sm text-muted-foreground">
                   {cat.text}
                 </p>
-                <span className="inline-flex items-center gap-2 self-start rounded-full bg-accent/10 px-3 py-1.5 text-xs font-medium text-accent">
+                <span className="inline-flex items-center gap-2 self-start rounded-full bg-accent/10 px-3 py-1.5 text-xs font-medium text-accent transition-all duration-300 ease-out md:translate-y-1 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-focus-within:translate-y-0 md:group-focus-within:opacity-100 motion-reduce:translate-y-0 motion-reduce:opacity-100">
                   <BadgeCheck className="h-3.5 w-3.5" />
                   Entrega feita pela nossa rede de estafetas
                 </span>

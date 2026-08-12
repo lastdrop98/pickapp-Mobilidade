@@ -11,7 +11,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { TiltCard } from "@/components/TiltCard";
 
 const RoleSelectorSection = () => (
-  <section className="py-20 md:py-28 bg-background">
+  <section className="py-20 md:py-28">
     <div className="container mx-auto px-4">
       <ScrollReveal>
         <div className="text-center mb-12">
@@ -32,12 +32,12 @@ const RoleSelectorSection = () => (
           <TiltCard className="h-full">
             <Link
               to="/passageiro"
-              className="group block bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/50 hover:border-accent hover:shadow-xl transition-all h-full"
+              className="card-interactive group block bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/50 hover:border-accent h-full"
             >
-              <div className="w-14 h-14 bg-gradient-brand rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6 motion-reduce:transform-none">
+              <div className="w-14 h-14 bg-gradient-brand rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 ease-out group-hover:scale-105 motion-reduce:transform-none">
                 <Users className="w-7 h-7 text-primary-foreground" />
               </div>
-              <h3 className="text-2xl font-extrabold text-foreground mb-2">
+              <h3 className="text-2xl font-extrabold text-foreground mb-2 transition-colors duration-300 group-hover:text-accent">
                 Sou Passageiro
               </h3>
               <p className="text-muted-foreground mb-6">
@@ -55,12 +55,12 @@ const RoleSelectorSection = () => (
           <TiltCard className="h-full">
             <Link
               to="/motorista"
-              className="group block bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/50 hover:border-accent hover:shadow-xl transition-all h-full"
+              className="card-interactive group block bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/50 hover:border-accent h-full"
             >
-              <div className="w-14 h-14 bg-gradient-green rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6 motion-reduce:transform-none">
+              <div className="w-14 h-14 bg-gradient-green rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 ease-out group-hover:scale-105 motion-reduce:transform-none">
                 <Car className="w-7 h-7 text-primary-foreground" />
               </div>
-              <h3 className="text-2xl font-extrabold text-foreground mb-2">
+              <h3 className="text-2xl font-extrabold text-foreground mb-2 transition-colors duration-300 group-hover:text-accent">
                 Sou Motorista
               </h3>
               <p className="text-muted-foreground mb-6">
