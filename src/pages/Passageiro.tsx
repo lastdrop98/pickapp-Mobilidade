@@ -22,8 +22,8 @@ import categoriesImage from "@/assets/pickapp-categories-new.jpeg";
 import passengerPromo from "@/assets/pickapp-passenger-promo.jpg";
 import passengerDiscount from "@/assets/pickapp-passenger-discount.jpeg";
 import { useState, useEffect } from "react";
-import bannerSet from "@/assets/page-passageiro.jpg?w=640;1024;1600;1920&format=webp&quality=85&as=srcset";
-import bannerSrc from "@/assets/page-passageiro.jpg?w=1600&format=webp&quality=85";
+import bannerSet from "@/assets/page-passageiro.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
+import bannerSrc from "@/assets/page-passageiro.jpg?w=1600&format=webp&quality=90";
 
 const howToSteps = [
   {

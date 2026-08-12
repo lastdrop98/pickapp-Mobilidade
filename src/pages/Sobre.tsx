@@ -2,8 +2,8 @@ import { PageBanner } from "@/components/PageBanner";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SEO } from "@/components/SEO";
 import { Target, Eye, Heart } from "lucide-react";
-import bannerSet from "@/assets/page-sobre.jpg?w=640;1024;1600;1920&format=webp&quality=85&as=srcset";
-import bannerSrc from "@/assets/page-sobre.jpg?w=1600&format=webp&quality=85";
+import bannerSet from "@/assets/page-sobre.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
+import bannerSrc from "@/assets/page-sobre.jpg?w=1600&format=webp&quality=90";
 
 const values = [
   {

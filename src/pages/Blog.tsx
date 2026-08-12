@@ -6,8 +6,8 @@ import { SEO } from "@/components/SEO";
 import { Badge } from "@/components/ui/badge";
 import { supabase } from "@/integrations/supabase/client";
 import { ArrowRight, Calendar } from "lucide-react";
-import bannerSet from "@/assets/page-blog.jpg?w=640;1024;1600;1920&format=webp&quality=85&as=srcset";
-import bannerSrc from "@/assets/page-blog.jpg?w=1600&format=webp&quality=85";
+import bannerSet from "@/assets/page-blog.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
+import bannerSrc from "@/assets/page-blog.jpg?w=1600&format=webp&quality=90";
 
 type Category = "Todos" | "Passageiros" | "Motoristas" | "Comunicados";
 

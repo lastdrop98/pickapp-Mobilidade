@@ -9,8 +9,8 @@ import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from "lucide-react";
 import { SUPPORT_EMAIL, PHONE_NUMBER, WHATSAPP_URL, WHATSAPP_DISPLAY } from "@/lib/constants";
 import { toast } from "sonner";
-import bannerSet from "@/assets/page-contactos.jpg?w=640;1024;1600;1920&format=webp&quality=85&as=srcset";
-import bannerSrc from "@/assets/page-contactos.jpg?w=1600&format=webp&quality=85";
+import bannerSet from "@/assets/page-contactos.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
+import bannerSrc from "@/assets/page-contactos.jpg?w=1600&format=webp&quality=90";
 
 const contactInfo = [
   {
