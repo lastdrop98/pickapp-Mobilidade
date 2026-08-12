@@ -11,7 +11,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { TiltCard } from "@/components/TiltCard";
 
 const RoleSelectorSection = () => (
-  <section className="py-20 md:py-28 bg-background">
+  <section className="py-20 md:py-28">
     <div className="container mx-auto px-4">
       <ScrollReveal>
         <div className="text-center mb-12">

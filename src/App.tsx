@@ -12,6 +12,7 @@ import {
 import { useEffect } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { AmbientBackground } from "@/components/AmbientBackground";
 import { AuthProvider } from "@/hooks/useAuth";
 import { AdminLayout } from "@/components/admin/AdminLayout";
 import Index from "./pages/Index";
@@ -45,6 +46,7 @@ function Layout() {
   return (
     <>
       <ScrollToTop />
+      <AmbientBackground />
       <Navbar />
       <main>
         <Outlet />

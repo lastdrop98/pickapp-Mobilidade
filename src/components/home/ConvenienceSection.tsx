@@ -69,7 +69,7 @@ export const ConvenienceSection = ({
 }) => (
   <section
     id="conveniencia"
-    className="relative overflow-hidden py-20 md:py-28 bg-gradient-to-b from-background via-secondary/40 to-background scroll-mt-24"
+    className="relative overflow-hidden py-20 md:py-28 scroll-mt-24"
   >
     <FloatingBlobs />
 

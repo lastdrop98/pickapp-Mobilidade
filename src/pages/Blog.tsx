@@ -61,7 +61,7 @@ const Blog = () => {
         subtitle="Histórias, dicas e novidades sobre a mobilidade em Moçambique."
       />
 
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto px-4">
           {/* Filters */}
           <div className="flex flex-wrap justify-center gap-2 mb-12">

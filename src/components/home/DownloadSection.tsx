@@ -5,7 +5,7 @@ import { PLAYSTORE_USER_URL, APPSTORE_USER_URL } from "@/lib/constants";
 import qrImage from "@/assets/pickapp-qr.jpeg";
 
 export const DownloadSection = () => (
-  <section className="py-20 md:py-28 bg-muted/50">
+  <section className="py-20 md:py-28 bg-muted/30">
     <div className="container mx-auto px-4">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
