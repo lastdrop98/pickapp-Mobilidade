@@ -95,7 +95,7 @@ export const ConvenienceSection = ({
       <div className="mb-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map((step, i) => (
           <ScrollReveal key={step.title} delay={i * 0.1}>
-            <div className="card-interactive group relative h-full rounded-2xl border border-border/50 bg-card p-6 shadow-sm hover:border-accent/40">
+            <div className="card-interactive group relative h-full rounded-2xl border border-border/50 bg-card/70 backdrop-blur-md p-6 shadow-sm hover:border-accent/40">
               <span className="absolute right-5 top-4 text-4xl font-extrabold text-accent/10">
                 {i + 1}
               </span>
@@ -114,7 +114,7 @@ export const ConvenienceSection = ({
         {categories.map((cat, i) => (
           <ScrollReveal key={cat.title} delay={i * 0.1}>
             <TiltCard className="h-full">
-              <div className="card-interactive group flex h-full flex-col rounded-2xl border border-border/50 bg-card p-7 shadow-sm hover:border-accent/40">
+              <div className="card-interactive group flex h-full flex-col rounded-2xl border border-border/50 bg-card/70 backdrop-blur-md p-7 shadow-sm hover:border-accent/40">
                 <div className="mb-5 overflow-hidden rounded-2xl">
                   <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-brand transition-transform duration-300 ease-out group-hover:scale-105 motion-reduce:transform-none">
                     <cat.icon className="h-7 w-7 text-primary-foreground" />

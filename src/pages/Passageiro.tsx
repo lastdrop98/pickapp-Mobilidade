@@ -282,7 +282,7 @@ const Passageiro = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {benefits.map((b, i) => (
               <ScrollReveal key={b.title} delay={i * 0.08}>
-                <div className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 flex items-start gap-4">
+                <div className="bg-card/70 backdrop-blur-md rounded-2xl p-6 shadow-sm border border-border/50 flex items-start gap-4">
                   <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center shrink-0">
                     <b.icon className="w-5 h-5 text-accent" />
                   </div>
@@ -314,7 +314,7 @@ const Passageiro = () => {
                 {safetyTips.map((tip, i) => (
                   <div
                     key={i}
-                    className="flex items-start gap-3 bg-card rounded-xl px-5 py-4 border border-border/50"
+                    className="flex items-start gap-3 bg-card/70 backdrop-blur-md rounded-xl px-5 py-4 border border-border/50"
                   >
                     <CheckCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                     <span className="text-foreground text-sm">{tip}</span>

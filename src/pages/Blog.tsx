@@ -95,7 +95,7 @@ const Blog = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {visible.map((post, i) => (
                 <ScrollReveal key={post.id} delay={i * 0.05}>
-                  <article className="bg-card rounded-2xl border border-border/50 shadow-sm overflow-hidden h-full flex flex-col hover:shadow-md transition-shadow">
+                  <article className="bg-card/70 backdrop-blur-md rounded-2xl border border-border/50 shadow-sm overflow-hidden h-full flex flex-col hover:shadow-md transition-shadow">
                     {post.cover_image && (
                       <Link to={`/blog/${post.slug}`} className="block aspect-video overflow-hidden bg-muted">
                         <img

@@ -200,7 +200,7 @@ const Motorista = () => {
               },
             ].map((step, i) => (
               <ScrollReveal key={step.number} delay={i * 0.08}>
-                <div className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 h-full relative">
+                <div className="bg-card/70 backdrop-blur-md rounded-2xl p-6 shadow-sm border border-border/50 h-full relative">
                   <span className="absolute top-4 right-5 text-3xl font-extrabold text-accent/20">
                     {step.number}
                   </span>
@@ -276,7 +276,7 @@ const Motorista = () => {
           <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
             {requirements.map((req, i) => (
               <ScrollReveal key={req.text} delay={i * 0.08}>
-                <div className="flex items-center gap-3 bg-card rounded-xl px-5 py-4 shadow-sm border border-border/50">
+                <div className="flex items-center gap-3 bg-card/70 backdrop-blur-md rounded-xl px-5 py-4 shadow-sm border border-border/50">
                   <req.icon className="w-5 h-5 text-accent shrink-0" />
                   <span className="font-medium text-foreground text-sm">
                     {req.text}
@@ -304,7 +304,7 @@ const Motorista = () => {
 
               <form
                 onSubmit={handleSubmit}
-                className="bg-card rounded-2xl p-8 shadow-sm border border-border/50 space-y-5"
+                className="bg-card/70 backdrop-blur-md rounded-2xl p-8 shadow-sm border border-border/50 space-y-5"
               >
                 <div>
                   <Label htmlFor="nome">Nome completo</Label>
