@@ -153,7 +153,7 @@
       transparent 70%
     );
     filter: blur(90px);
-    opacity: 0.18;
+    opacity: 0.34;
     animation: drift-a 22s ease-in-out infinite;
   }
 
@@ -171,7 +171,7 @@
       transparent 70%
     );
     filter: blur(100px);
-    opacity: 0.16;
+    opacity: 0.32;
     animation: drift-b 26s ease-in-out infinite;
   }
 
@@ -189,8 +189,26 @@
       transparent 72%
     );
     filter: blur(90px);
-    opacity: 0.12;
+    opacity: 0.26;
     animation: drift-c 30s ease-in-out infinite;
+  }
+
+  .ambient-blob--teal {
+    top: 105vh;
+    left: -12vw;
+    width: 60vw;
+    height: 60vw;
+    max-width: 780px;
+    max-height: 780px;
+    background: radial-gradient(
+      circle at 45% 55%,
+      rgba(63, 160, 232, 0.45),
+      rgba(139, 195, 74, 0.35) 48%,
+      transparent 72%
+    );
+    filter: blur(95px);
+    opacity: 0.28;
+    animation: drift-b 24s ease-in-out infinite reverse;
   }
 
   /* Lighter blur on small screens to keep scrolling smooth */

@@ -1,7 +1,6 @@
 /**
  * Continuous site-wide ambient background.
- * A single near-white canvas with 3 large, slowly drifting brand-coloured
- * blobs behind every section — no hard colour cuts between sections.
+ * Large, slowly drifting brand-coloured blue/green blobs behind every section.
  * Purely decorative, transform/opacity only, honours prefers-reduced-motion.
  */
 export const AmbientBackground = () => (
@@ -9,5 +8,6 @@ export const AmbientBackground = () => (
     <span className="ambient-blob ambient-blob--blue" />
     <span className="ambient-blob ambient-blob--green" />
     <span className="ambient-blob ambient-blob--mix" />
+    <span className="ambient-blob ambient-blob--teal" />
   </div>
 );
