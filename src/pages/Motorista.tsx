@@ -30,8 +30,8 @@ import { WHATSAPP_URL, PLAYSTORE_DRIVER_URL, APPSTORE_DRIVER_URL } from "@/lib/c
 import { SEO } from "@/components/SEO";
 import { toast } from "sonner";
 import { BgImage } from "@/components/BgImage";
-import driverBenefitsBgSet from "@/assets/driver-benefits-bg.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
-import driverBenefitsBgSrc from "@/assets/driver-benefits-bg.jpg?w=1600&format=webp&quality=90";
+import driverBenefitsBgSet from "@/assets/section-driver-benefits.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
+import driverBenefitsBgSrc from "@/assets/section-driver-benefits.jpg?w=1600&format=webp&quality=90";
 import bannerSet from "@/assets/page-motorista.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
 import bannerSrc from "@/assets/page-motorista.jpg?w=1600&format=webp&quality=90";
 
@@ -112,8 +112,9 @@ const Motorista = () => {
       {/* Hero Banner with Driver Image */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
-          <BgImage srcSet={bannerSet} src={bannerSrc} alt="Motorista PickApp a aceitar uma viagem no telemóvel em Maputo" eager />
+          <BgImage srcSet={bannerSet} src={bannerSrc} alt="Motorista PickApp a aceitar uma viagem no telemóvel em Maputo" eager className="object-center" />
         </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/70 to-primary/40" />
         <div className="absolute top-10 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <ScrollReveal>
@@ -222,9 +223,14 @@ const Motorista = () => {
       {/* Visual Benefits with background image */}
       <section className="relative py-20 md:py-28 text-primary-foreground overflow-hidden min-h-[500px] flex items-center">
         <div className="absolute inset-0">
-          <BgImage srcSet={driverBenefitsBgSet} src={driverBenefitsBgSrc} />
+          <BgImage
+            srcSet={driverBenefitsBgSet}
+            src={driverBenefitsBgSrc}
+            alt="Motorista PickApp ao lado do seu carro numa avenida de Maputo"
+            className="object-center"
+          />
         </div>
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/45" />
         <div className="container mx-auto px-4 relative z-10 w-full">
           <ScrollReveal>
             <div className="text-center mb-14">
