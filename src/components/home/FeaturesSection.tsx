@@ -94,7 +94,7 @@ export const FeaturesSection = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {whyFeatures.map((feature, index) => (
             <ScrollReveal key={feature.title} delay={index * 0.1}>
-              <div className="card-interactive group bg-card rounded-2xl p-6 shadow-sm border border-border/50 hover:border-accent/40 h-full">
+              <div className="card-interactive group bg-card/70 backdrop-blur-md rounded-2xl p-6 shadow-sm border border-border/50 hover:border-accent/40 h-full">
                 <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4 overflow-hidden transition-transform duration-300 ease-out group-hover:scale-105 motion-reduce:transform-none">
                   <feature.icon className="w-6 h-6 text-accent" />
                 </div>

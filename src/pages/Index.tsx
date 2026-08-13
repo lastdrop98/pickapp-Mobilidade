@@ -32,7 +32,7 @@ const RoleSelectorSection = () => (
           <TiltCard className="h-full">
             <Link
               to="/passageiro"
-              className="card-interactive group block bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/50 hover:border-accent h-full"
+              className="card-interactive group block bg-card/70 backdrop-blur-md rounded-2xl p-8 md:p-10 shadow-sm border border-border/50 hover:border-accent h-full"
             >
               <div className="w-14 h-14 bg-gradient-brand rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 ease-out group-hover:scale-105 motion-reduce:transform-none">
                 <Users className="w-7 h-7 text-primary-foreground" />
@@ -55,7 +55,7 @@ const RoleSelectorSection = () => (
           <TiltCard className="h-full">
             <Link
               to="/motorista"
-              className="card-interactive group block bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/50 hover:border-accent h-full"
+              className="card-interactive group block bg-card/70 backdrop-blur-md rounded-2xl p-8 md:p-10 shadow-sm border border-border/50 hover:border-accent h-full"
             >
               <div className="w-14 h-14 bg-gradient-green rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 ease-out group-hover:scale-105 motion-reduce:transform-none">
                 <Car className="w-7 h-7 text-primary-foreground" />

@@ -163,7 +163,7 @@ const Contactos = () => {
 
             {/* Contact Form */}
             <ScrollReveal direction="right">
-              <div className="bg-card rounded-2xl p-8 shadow-sm border border-border/50">
+              <div className="bg-card/70 backdrop-blur-md rounded-2xl p-8 shadow-sm border border-border/50">
                 <h2 className="text-2xl font-extrabold text-foreground mb-6">
                   Envie uma Mensagem
                 </h2>

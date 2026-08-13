@@ -87,7 +87,7 @@ const Sobre = () => (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {values.map((v, i) => (
             <ScrollReveal key={v.title} delay={i * 0.1}>
-              <div className="bg-card rounded-2xl p-8 shadow-sm border border-border/50 text-center h-full">
+              <div className="bg-card/70 backdrop-blur-md rounded-2xl p-8 shadow-sm border border-border/50 text-center h-full">
                 <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
                   <v.icon className="w-7 h-7 text-accent" />
                 </div>

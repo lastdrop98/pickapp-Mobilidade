@@ -9,7 +9,7 @@ export const DownloadSection = () => (
     <div className="container mx-auto px-4">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
-          <div className="bg-card rounded-3xl p-10 md:p-16 shadow-lg border border-border/50">
+          <div className="bg-card/70 backdrop-blur-md rounded-3xl p-10 md:p-16 shadow-lg border border-border/50">
             <div className="grid md:grid-cols-2 gap-10 items-center">
               {/* Text + CTA */}
               <div className="text-center md:text-left">
