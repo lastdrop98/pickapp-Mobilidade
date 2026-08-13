@@ -11,8 +11,8 @@ import {
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { BgImage } from "@/components/BgImage";
-import howItWorksBgSet from "@/assets/how-it-works-bg.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
-import howItWorksBgSrc from "@/assets/how-it-works-bg.jpg?w=1600&format=webp&quality=90";
+import howItWorksBgSet from "@/assets/section-how-it-works.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
+import howItWorksBgSrc from "@/assets/section-how-it-works.jpg?w=1600&format=webp&quality=90";
 
 const whyFeatures = [
   {
@@ -112,17 +112,23 @@ export const FeaturesSection = () => (
     </section>
 
     {/* Como funciona */}
-    <section className="relative py-20 md:py-28 overflow-hidden">
+    <section className="relative py-20 md:py-28 overflow-hidden min-h-[500px] flex items-center">
       <div className="absolute inset-0">
-        <BgImage srcSet={howItWorksBgSet} src={howItWorksBgSrc} />
+        <BgImage
+          srcSet={howItWorksBgSet}
+          src={howItWorksBgSrc}
+          alt="Passageira em Maputo a pedir uma viagem PickApp pelo telemóvel"
+          className="object-center"
+        />
       </div>
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/45" />
+      <div className="container mx-auto px-4 relative z-10 w-full">
         <ScrollReveal>
           <div className="text-center mb-16">
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">
               Passo a passo
             </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mt-2">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-primary-foreground mt-2 drop-shadow">
               Como funciona?
             </h2>
           </div>
@@ -131,14 +137,14 @@ export const FeaturesSection = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {steps.map((step, index) => (
             <ScrollReveal key={step.number} delay={index * 0.1}>
-              <div className="card-interactive text-center bg-card rounded-2xl p-6 border border-border/50 shadow-sm h-full">
+              <div className="card-interactive text-center bg-primary-foreground/10 backdrop-blur-md rounded-2xl p-6 border border-primary-foreground/15 hover:border-accent/40 shadow-sm h-full">
                 <div className="w-16 h-16 bg-accent text-accent-foreground rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl font-extrabold shadow-lg">
                   {step.number}
                 </div>
-                <h3 className="font-bold text-foreground mb-2">
+                <h3 className="font-bold text-primary-foreground mb-2">
                   {step.title}
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-primary-foreground/75">
                   {step.description}
                 </p>
               </div>

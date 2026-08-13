@@ -135,8 +135,9 @@ const Passageiro = () => {
       />
       <section className="relative pt-32 pb-16 overflow-hidden">
         <div className="absolute inset-0">
-          <BgImage srcSet={bannerSet} src={bannerSrc} alt="Passageiro à espera da viagem PickApp numa rua de Maputo" eager />
+          <BgImage srcSet={bannerSet} src={bannerSrc} alt="Passageiro à espera da viagem PickApp numa rua de Maputo" eager className="object-center" />
         </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/70 to-primary/40" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <ScrollReveal>
             <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-4">
