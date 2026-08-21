@@ -10,6 +10,7 @@ const navLinks = [
   { name: "Motorista", path: "/motorista" },
   { name: "Passageiro", path: "/passageiro" },
   { name: "Conveniência", path: "/conveniencia" },
+  { name: "Estabelecimentos", path: "/estabelecimentos" },
   { name: "Sobre", path: "/sobre" },
   { name: "Blog", path: "/blog" },
   { name: "Contactos", path: "/contactos" },
