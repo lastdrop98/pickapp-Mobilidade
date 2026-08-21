@@ -19,6 +19,8 @@ import Index from "./pages/Index";
 import Motorista from "./pages/Motorista";
 import Passageiro from "./pages/Passageiro";
 import Conveniencia from "./pages/Conveniencia";
+import Estabelecimentos from "./pages/Estabelecimentos";
+import MenuEstabelecimento from "./pages/MenuEstabelecimento";
 import Sobre from "./pages/Sobre";
 import Contactos from "./pages/Contactos";
 import Blog from "./pages/Blog";
@@ -69,6 +71,9 @@ const App = () => (
               <Route path="/motorista" element={<Motorista />} />
               <Route path="/passageiro" element={<Passageiro />} />
               <Route path="/conveniencia" element={<Conveniencia />} />
+              <Route path="/estabelecimentos" element={<Estabelecimentos />} />
+              <Route path="/menu/:slug" element={<MenuEstabelecimento />} />
+
 
               <Route path="/sobre" element={<Sobre />} />
               <Route path="/contactos" element={<Contactos />} />
