@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { estabelecimentos } from "@/data/estabelecimentos";
+import { getMenuImage } from "@/lib/menuImages";
 import { PLAYSTORE_USER_URL, APPSTORE_USER_URL } from "@/lib/constants";
 
 const MenuEstabelecimento = () => {
