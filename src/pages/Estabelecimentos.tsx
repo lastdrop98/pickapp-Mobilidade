@@ -5,6 +5,8 @@ import { SEO } from "@/components/SEO";
 import { PageBanner } from "@/components/PageBanner";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { estabelecimentos } from "@/data/estabelecimentos";
+import bannerSet from "@/assets/page-estabelecimentos.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
+import bannerSrc from "@/assets/page-estabelecimentos.jpg?w=1600&format=webp&quality=90";
 
 const Estabelecimentos = () => (
   <>
@@ -16,6 +18,9 @@ const Estabelecimentos = () => (
     <PageBanner
       title="Estabelecimentos"
       subtitle="Os nossos restaurantes parceiros em Maputo. Veja o menu e peça já pela app."
+      imageSrcSet={bannerSet}
+      imageSrc={bannerSrc}
+      imageAlt="Restaurante parceiro da PickApp em Maputo"
     />
 
     <section className="py-16 md:py-24">
