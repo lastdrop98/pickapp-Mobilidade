@@ -5,6 +5,8 @@ import { SEO } from "@/components/SEO";
 import { PageBanner } from "@/components/PageBanner";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { estabelecimentos } from "@/data/estabelecimentos";
+import bannerSet from "@/assets/page-estabelecimentos.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
+import bannerSrc from "@/assets/page-estabelecimentos.jpg?w=1600&format=webp&quality=90";
 
 const Estabelecimentos = () => (
   <>
