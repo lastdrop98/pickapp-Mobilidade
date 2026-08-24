@@ -18,6 +18,9 @@ const Estabelecimentos = () => (
     <PageBanner
       title="Estabelecimentos"
       subtitle="Os nossos restaurantes parceiros em Maputo. Veja o menu e peça já pela app."
+      imageSrcSet={bannerSet}
+      imageSrc={bannerSrc}
+      imageAlt="Restaurante parceiro da PickApp em Maputo"
     />
 
     <section className="py-16 md:py-24">
