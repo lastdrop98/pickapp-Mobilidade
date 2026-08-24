@@ -1,9 +1,9 @@
-import kuantoLogo from "@/assets/estabelecimentos/kuanto-custa-logo.jpeg.asset.json";
-import escorpiaoLogo from "@/assets/estabelecimentos/escorpiao-logo.webp.asset.json";
-import xikafuLogo from "@/assets/estabelecimentos/xikafu-logo.jpeg.asset.json";
-import kuantoCapa from "@/assets/estabelecimentos/kuanto-custa-capa.jpeg.asset.json";
-import escorpiaoCapa from "@/assets/estabelecimentos/escorpiao-capa.webp.asset.json";
-import xikafuCapa from "@/assets/estabelecimentos/xikafu-capa.jpg.asset.json";
+const kuantoLogo = "/images/kuanto-custa-logo.jpeg";
+const escorpiaoLogo = "/images/escorpiao-logo.webp";
+const xikafuLogo = "/images/xikafu-logo.jpeg";
+const kuantoCapa = "/images/kuanto-custa-capa.jpeg";
+const escorpiaoCapa = "/images/escorpiao-capa.webp";
+const xikafuCapa = "/images/xikafu-capa.jpg";
 
 export interface MenuItem {
   nome: string;
@@ -34,8 +34,8 @@ export const estabelecimentos: Estabelecimento[] = [
     categoria: "Restaurante",
     morada: "Av. Vladimir Lenine, em frente aos táxis Marcelo, Maputo",
     horario: "Dias úteis 10h-00h, Fim de semana 10h-23h",
-    logoUrl: kuantoLogo.url,
-    coverUrl: kuantoCapa.url,
+    logoUrl: kuantoLogo,
+    coverUrl: kuantoCapa,
     real: true,
     menu: [
       {
@@ -257,8 +257,8 @@ export const estabelecimentos: Estabelecimento[] = [
     categoria: "Restaurante",
     morada: "Maputo",
     horario: "A confirmar com o estabelecimento",
-    logoUrl: escorpiaoLogo.url,
-    coverUrl: escorpiaoCapa.url,
+    logoUrl: escorpiaoLogo,
+    coverUrl: escorpiaoCapa,
     real: true,
     menu: [
       {
@@ -517,8 +517,8 @@ export const estabelecimentos: Estabelecimento[] = [
     categoria: "Restaurante",
     morada: "Av. Ahmed Sékou Touré, Nº 1957/RC, Cidade de Maputo",
     horario: "Segunda a Sexta, 9h-22h",
-    logoUrl: xikafuLogo.url,
-    coverUrl: xikafuCapa.url,
+    logoUrl: xikafuLogo,
+    coverUrl: xikafuCapa,
     real: true,
     menu: [
       {
