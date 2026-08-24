@@ -94,11 +94,20 @@ const MenuEstabelecimento = () => {
                     {cat.itens.map((item) => (
                       <li
                         key={item.nome}
-                        className="flex items-baseline justify-between gap-4 py-3"
+                        className="flex items-center justify-between gap-4 py-3"
                       >
-                        <span className="text-sm text-foreground md:text-base">
-                          {item.nome}
-                        </span>
+                        <div className="flex min-w-0 items-center gap-3">
+                          <img
+                            src={getMenuImage(cat.categoria)}
+                            alt={item.nome}
+                            loading="lazy"
+                            decoding="async"
+                            className="h-14 w-14 shrink-0 rounded-xl object-cover shadow-sm md:h-16 md:w-16"
+                          />
+                          <span className="text-sm text-foreground md:text-base">
+                            {item.nome}
+                          </span>
+                        </div>
                         <span className="shrink-0 font-bold text-accent">
                           {item.preco} MT
                         </span>
