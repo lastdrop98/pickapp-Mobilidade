@@ -8,8 +8,8 @@ import { PLAYSTORE_USER_URL, APPSTORE_USER_URL } from "@/lib/constants";
 import { BgImage } from "@/components/BgImage";
 import heroImage from "@/assets/hero-mobility.jpg?w=512;768;1024;1600&format=webp&quality=90&as=srcset";
 import heroImageSrc from "@/assets/hero-mobility.jpg?w=1024&format=webp&quality=90";
-import heroBgSet from "@/assets/page-home.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
-import heroBgSrc from "@/assets/page-home.jpg?w=1600&format=webp&quality=90";
+import heroBgSet from "@/assets/hero-driver-bg.jpg?w=640;1024;1600;1920&format=webp&quality=90&as=srcset";
+import heroBgSrc from "@/assets/hero-driver-bg.jpg?w=1600&format=webp&quality=90";
 
 export const HeroSection = () => {
   const ref = useRef<HTMLElement>(null);
